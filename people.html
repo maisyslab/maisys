@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>People - MAISys Research Group</title>
+    <style>
+        :root {
+            --primary-color: #003366;
+            --secondary-color: #0077be;
+            --accent-color: #ffd700;
+            --text-color: #333;
+            --bg-color: #f9f9f9;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        nav {
+            background-color: var(--secondary-color);
+            padding: 0.5rem;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: var(--accent-color);
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+        h2, h3 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+        }
+        .people-category {
+            margin-bottom: 40px;
+        }
+        .people-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .person {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .person:hover {
+            transform: translateY(-5px);
+        }
+        .person img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .person-info {
+            padding: 15px;
+        }
+        .person-info h3 {
+            margin: 0;
+            color: var(--primary-color);
+        }
+        .person-info p {
+            margin: 5px 0;
+            font-size: 0.9em;
+        }
+        .person-links a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            margin-right: 10px;
+            font-size: 0.8em;
+        }
+        .person-links a:hover {
+            text-decoration: underline;
+        }
+        .alumni-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .alumni-table th, .alumni-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        .alumni-table th {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+        .alumni-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .alumni-table tr:hover {
+            background-color: #ddd;
+        }
+        .gallery {
+            margin-top: 40px;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px;
+            font-size: 0.9em;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .gallery-item:hover .gallery-caption {
+            opacity: 1;
+        }
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .footer-section {
+            margin: 10px;
+        }
+        .social-link {
+            color: white;
+            font-size: 24px;
+            margin-left: 10px;
+            transition: color 0.3s ease;
+        }
+        .social-link:hover {
+            color: var(--accent-color);
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1>Medical AI Systems (MAISys)</h1>
+        <p>Research Group at Indian Institute of Technology Jodhpur, India</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="people.html">People</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h2>Our Team</h2>
+        
+        <div class="people-category">
+            <h3>Faculty</h3>
+            <div class="people-grid">
+                <div class="person">
+                    <img src="./images/deepak.jpeg" alt="Dr. Deepak Mishra">
+                    <div class="person-info">
+                        <h3>Dr. Jane Doe</h3>
+                        <p>Principal Investigator</p>
+                        <p>Assistant Professor, Department of Computer Science and Engineering</p>
+                        <div class="person-links">
+                            <a href="#">Website</a>
+                            <a href="#">Google Scholar</a>
+                            <a href="#">Email</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="people-category">
+            <h3>PhD Students</h3>
+            <div class="people-grid">
+                <div class="person">
+                    <img src="./images/azad.png" alt="Azad Singh">
+                    <div class="person-info">
+                        <h3>John Smith</h3>
+                        <p>Research focus: Medical Image Segmentation</p>
+                        <div class="person-links">
+                            <a href="#">Website</a>
+                            <a href="#">LinkedIn</a>
+                            <a href="#">Email</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="person">
+                    <img src="./images/mayank.jpg" alt="Mayank Kumar">
+                    <div class="person-info">
+                        <h3>Emily Johnson</h3>
+                        <p>Research focus: Deep Learning for Radiomics</p>
+                        <div class="person-links">
+                            <a href="#">Website</a>
+                            <a href="#">LinkedIn</a>
+                            <a href="#">Email</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="person">
+                    <img src="./images/aiman.jpg" alt="Aiman Farooq">
+                    <div class="person-info">
+                        <h3>Michael Chen</h3>
+                        <p>Research focus: AI-assisted Diagnosis</p>
+                        <div class="person-links">
+                            <a href="#">Website</a>
+                            <a href="#">LinkedIn</a>
+                            <a href="#">Email</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="person"></div>
+                    <img src="./images/Ishan.png" alt="Ishan Mishra">
+                    <div class="person-info">
+                        <h3>Michael Chen</h3>
+                        <p>Research focus: AI-assisted Diagnosis</p>
+                        <div class="person-links">
+                            <a href="#">Website</a>
+                            <a href="#">LinkedIn</a>
+                            <a href="#">Email</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="person"></div>
+                    <img src="./images/gajendra.jpeg" alt="Gajendra Singh">
+                    <div class="person-info">
+                        <h3>Michael Chen</h3>
+                        <p>Research focus: AI-assisted Diagnosis</p>
+                        <div class="person-links">
+                            <a href="#">Website</a>
+                            <a href="#">LinkedIn</a>
+                            <a href="#">Email</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="person"></div>
+                    <img src="./images/sagar.jpg" alt="Sagar Shamanna">
+                    <div class="person-info">
+                        <h3>Michael Chen</h3>
+                        <p>Research focus: AI-assisted Diagnosis</p>
+                        <div class="person-links">
+                            <a href="#">Website</a>
+                            <a href="#">LinkedIn</a>
+                            <a href="#">Email</a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="people-category">
+            <h3>MTech Students</h3>
+            <div class="people-grid">
+                <div class="person">
+                    <img src="./images/placeholder-person4.jpg" alt="Deepan Mandal">
+                    <div class="person-info">
+                        <h3>Alice Brown</h3>
+                        <p>Research focus: AI in Radiology</p>
+                        <div class="person-links">
+                            <a href="#">Website</a>
+                            <a href="#">LinkedIn</a>
+                            <a href="#">Email</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="person">
+                    <img src="./images/placeholder-person5.jpg" alt="Gyanendra Chaubey ">
+                    <div class="person-info">
+                        <h3>David Lee</h3>
+                        <p>Research focus: Medical Image Enhancement</p>
+                        <div class="person-links">
+                            <a href="#">Website</a>
+                            <a href="#">LinkedIn</a>
+                            <a href="#">Email</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="person">
+                    <img src="./images/placeholder-person6.jpg" alt="Shripad Arun Pate">
+                    <div class="person-info">
+                        <h3>Sarah Patel</h3>
+                        <p>Research focus: Federated Learning in Healthcare</p>
+                        <div class="person-links">
+                            <a href="#">Website</a>
+                            <a href="#">LinkedIn</a>
+                            <a href="#">Email</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="people-category">
+            <h3>Alumni</h3>
+            <table class="alumni-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Degree</th>
+                        <th>Graduation Year</th>
+                        <th>Current Position</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Alex Johnson</td>
+                        <td>PhD</td>
+                        <td>2022</td>
+                        <td>Data Scientist at XYZ Corp</td>
+                    </tr>
+                    <tr>
+                        <td>Emily Brown</td>
+                        <td>MTech</td>
+                        <td>2023</td>
+                        <td>AI Engineer at ABC Inc.</td>
+                    </tr>
+                    <tr>
+                        <td>Michael Lee</td>
+                        <td>Intern</td>
+                        <td>2023</td>
+                        <td>Graduate Student at University of California</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="gallery">
+            <h3>Gallery</h3>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="./images/gallery-1.jpg" alt="Lab outing">
+                    <div class="gallery-caption">Annual lab outing to the nearby hills</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="./images/gallery-2.jpg" alt="Conference presentation">
+                    <div class="gallery-caption">John presenting his work at MICCAI 2023</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="./images/gallery-3.jpg" alt="Lab celebration">
+                    <div class="gallery-caption">Celebrating Alice's paper acceptance</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="./images/gallery-4.jpg" alt="Guest lecture">
+                    <div class="gallery-caption">Guest lecture by Prof. Smith on AI in Healthcare</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Medical AI Systems Lab<br>
+                Indian Institute of Technology Jodhpur<br>
+                NH 62, Nagaur Road, Karwar<br>
+                Jodhpur, Rajasthan 342037, India</p>
+            </div>
+            <div class="footer-section">
+                <h4>Get in Touch</h4>
+                <p>Email: maisys@iitj.ac.in<br>
+                Phone: +91 291 280 1234</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <a href="https://www.linkedin.com/company/maisys-iitj" class="social-link" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
