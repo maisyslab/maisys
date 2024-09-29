@@ -241,11 +241,13 @@
                 <ul id="announcementsList">
                     <li><strong>Double Grant Success for Mr. Azad Singh:</strong> We are thrilled to announce that Mr. Azad Singh has been awarded two prestigious grants to attend MICCAI 2024 in Marrakesh, Morocco (October 6-10, 2024):
                         <ul>
-                            <li>RISE Registration Grant</li>
+                            <li>MICCAI RISE Registration Grant</li>
                             <li>Anusandhan National Research Foundation (ANRF) Grant.</li>
                         </ul>
                         Congratulations to Azad on this outstanding achievement!
                     </li>
+                    <li>Dr. Deepak Mishra, Appointed as Associate Dean, Digital Infrastructure and Automation at IIT Jodhpur.</li>
+                    <li>Mr. Ishan Mishra, is visiting the University of Buffalo (SUNY Buffalo) as research intern</li>
                 </ul>
                 <div class="read-more">
                     <a onclick="toggleAnnouncements()">Read more</a>
@@ -298,10 +300,23 @@
         }
 
         function toggleAnnouncements() {
-            const list = document.getElementById('announcementsList');
-            const items = list.getElementsByTagName('li');
-            const readMoreLink = list.nextElementSibling.getElementsByTagName('a')[0];
-            
+        const list = document.getElementById('announcementsList');
+        const items = list.getElementsByTagName('li');
+        const readMoreLink = list.nextElementSibling.getElementsByTagName('a')[0];
+        
+        if (items.length <= 3) {
+            // If there are 3 or fewer items, toggle all items
+            for (let i = 0; i < items.length; i++) {
+                if (items[i].style.display === 'none') {
+                    items[i].style.display = 'block';
+                    readMoreLink.textContent = 'Show less';
+                } else {
+                    items[i].style.display = 'none';
+                    readMoreLink.textContent = 'Read more';
+                }
+            }
+        } else {
+            // If there are more than 3 items, toggle items after the third one
             for (let i = 3; i < items.length; i++) {
                 if (items[i].style.display === 'none' || items[i].style.display === '') {
                     items[i].style.display = 'block';
@@ -312,6 +327,7 @@
                 }
             }
         }
+    }
     </script>
 </body>
 </html>
