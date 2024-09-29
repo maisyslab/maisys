@@ -246,7 +246,7 @@
             </div>
         </div>
 
-        <div class="paper-box"></div>
+        <div class="paper-box">
             <div class="paper-info">
                 <div class="paper-title">IDQCE: Instance Discrimination Learning through Quantized Contextual Embeddings for Medical Images</div>
                 <div class="paper-authors">Azad Singh and Deepak Mishra</div>
@@ -283,10 +283,10 @@
             </div>
         </div>
 
-        <div class="paper-box"></div>
+        <div class="paper-box">
             <div class="paper-info">
                 <div class="paper-title">Large Scale Time-Series Representation Learning via Simultaneous Low- and High-Frequency Feature Bootstrapping</div>
-                <div class="paper-authors">Vandan Gorade, Azad Singh (Equal Contribution) and Deepak Mishra </div>
+                <div class="paper-authors">Vandan Gorade*, Azad Singh* and Deepak Mishra (* Equal Contribution) </div>
                 <div class="paper-publication">IEEE, Transactions on Neural Networks and Learning Systems 2023</div>
                 <a href="https://ieeexplore.ieee.org/document/10329573" class="paper-link" target="_blank">View Paper</a>
             </div>
@@ -314,6 +314,59 @@
                 </div>
             </div>
         </div>
+
+        <div class="paper-box">
+            <div class="paper-info">
+                <div class="paper-title">Branching Out for Better BYOL</div>
+                <div class="paper-authors">Azad Singh and Deepak Mishra </div>
+                <div class="paper-publication">NeurIPS'21 SSL Workshop 2021</div>
+                <a href="https://sslneurips21.github.io/files/CameraReady/Multi_Target_BYOL%20.pdf" class="paper-link" target="_blank">View Paper</a>
+            </div>
+            <div class="paper-content">
+                <div class="paper-image">
+                    <img src="./images/mtbyol.png" alt="mtbyol Architecture">
+                </div>
+                <div class="paper-abstract">
+                    <div class="abstract-content">
+                        BYOL leads migration of self-supervised learning techniques from contrastive
+                        to non-constative paradigm. Non-constative techniques do not require negative
+                        pairs to learn meaningful representations from the data. Their success mainly
+                        depends on the stochastic composition of data augmentation techniques and the
+                        siamese configuration of deep neural networks. However, BYOL in its original
+                        form is limited to only two augmented views per training cycle. This motivates us
+                        to extend BYOL from a single target network branch to multiple branches, which
+                        enables simultaneous analysis of multiple augmented views of an input image.
+                        Increasing branches of the target networks marginally increase the computational
+                        cost as each branch is updated only using exponential moving average of online
+                        network’s parameters. We demonstrate superior performance of Multi-Target
+                        BYOL on several vision datasets by evaluating the representations learned by the
+                        online network using linear evaluation protocols.
+                    </div>
+                    <span class="read-more" onclick="toggleAbstract(this)">Read More</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="paper-box">
+            <div class="paper-info">
+                <div class="paper-title">MBGRLp: Multiscale Bootstrap Graph Representation Learning on Pointcloud (Student Abstract)</div>
+                <div class="paper-authors">Vandan Gorade, Azad Singh and Deepak Mishra </div>
+                <div class="paper-publication">AAAI 2022</div>
+                <a href="https://ojs.aaai.org/index.php/AAAI/article/view/21615" class="paper-link" target="_blank">View Paper</a>
+            </div>
+            <div class="paper-content">
+                <div class="paper-image">
+                    <img src="./images/mbgrlp.png" alt="mtbyol Architecture">
+                </div>
+                <div class="paper-abstract">
+                    <div class="abstract-content">
+                        Point cloud has gained a lot of attention with the availability of a large amount of point cloud data and increasing applications like city planning and self-driving cars. However, current methods, often rely on labeled information and costly processing, such as converting point cloud to voxel. We propose a self-supervised learning approach to tackle these problems, combating labelling and additional memory cost issues. Our proposed method achieves results comparable to supervised and unsupervised baselines on the widely used benchmark datasets for self-supervised point cloud classification like ShapeNet, ModelNet10/40.
+                    </div>
+                    <span class="read-more" onclick="toggleAbstract(this)">Read More</span>
+                </div>
+            </div>
+        </div>
+
 
         <!-- Add more paper boxes as needed -->
 
