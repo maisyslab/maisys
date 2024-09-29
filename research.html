@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research - MAISys Research Group</title>
+    <style>
+        :root {
+            --primary-color: #003366;
+            --secondary-color: #0077be;
+            --accent-color: #ffd700;
+            --text-color: #333;
+            --bg-color: #f9f9f9;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        nav {
+            background-color: var(--secondary-color);
+            padding: 0.5rem;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: var(--accent-color);
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+        }
+        .paper-box {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+        .paper-info {
+            padding: 20px;
+        }
+        .paper-title {
+            font-size: 1.4em;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        .paper-authors {
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        .paper-publication {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .paper-link {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .paper-link:hover {
+            background-color: var(--primary-color);
+        }
+        .paper-content {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        .paper-image {
+            flex: 1;
+            min-width: 300px;
+            max-width: 100%;
+            margin-right: 20px;
+        }
+        .paper-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .paper-abstract {
+            flex: 2;
+            min-width: 300px;
+        }
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .footer-section {
+            margin: 10px;
+        }
+        .social-link {
+            color: white;
+            font-size: 24px;
+            margin-left: 10px;
+            transition: color 0.3s ease;
+        }
+        .social-link:hover {
+            color: var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Medical AI Systems (MAISys)</h1>
+        <p>Research Group at Indian Institute of Technology Jodhpur, India</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="people.html">People</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h2>Our Research</h2>
+        
+        <div class="paper-box">
+            <div class="paper-info">
+                <div class="paper-title">MLVICX: Multi-Level Variance-Covariance Exploration for Chest X-ray Self-Supervised Representation Learning</div>
+                <div class="paper-authors">Azad Singh, Vandan Gorade, and Deepak Mishra</div>
+                <div class="paper-publication">IEEE Journal of Biomedical and Health Informatics, 2024</div>
+                <a href="#" class="paper-link">View Paper</a>
+            </div>
+            <div class="paper-content">
+                <div class="paper-image">
+                    <img src="./images/paper1-architecture.jpg" alt="MLVICX Architecture">
+                </div>
+                <div class="paper-abstract">
+                    <h3>Abstract</h3>
+                    <p>
+                        This paper introduces MLVICX, a novel self-supervised learning approach for chest X-ray image analysis. 
+                        The method explores multi-level variance and covariance in the feature space to improve representation learning. 
+                        Our approach demonstrates significant improvements in downstream tasks such as classification and segmentation 
+                        of chest X-ray images, outperforming existing state-of-the-art methods.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="paper-box">
+            <div class="paper-info">
+                <div class="paper-title">CoBooM: Codebook Guided Bootstrapping for Medical Image Representation Learning</div>
+                <div class="paper-authors">Azad Singh and Deepak Mishra</div>
+                <div class="paper-publication">MICCAI, 2024</div>
+                <a href="#" class="paper-link">View Paper</a>
+            </div>
+            <div class="paper-content">
+                <div class="paper-image">
+                    <img src="./images/paper2-architecture.jpg" alt="CoBooM Architecture">
+                </div>
+                <div class="paper-abstract">
+                    <h3>Abstract</h3>
+                    <p>
+                        CoBooM introduces a novel approach to medical image representation learning using codebook-guided bootstrapping. 
+                        This method leverages a learned codebook to guide the bootstrapping process, enhancing the quality of learned 
+                        representations. Our experiments on various medical imaging datasets show that CoBooM significantly improves 
+                        the performance of downstream tasks such as classification and segmentation.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add more paper boxes as needed -->
+
+    </div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Medical AI Systems Group, 217A CSE Department<br>
+                Indian Institute of Technology Jodhpur<br>
+                NH 62, Nagaur Road, Karwar<br>
+                Jodhpur, Rajasthan 342030, India</p>
+            </div>
+            <div class="footer-section">
+                <h4>Get in Touch</h4>
+                <p>Email: dmishra@iitj.ac.in<br>
+                Phone: +91 291 280 1234</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <a href="https://www.linkedin.com/company/maisys-iitj" class="social-link" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
