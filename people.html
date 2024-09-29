@@ -82,10 +82,16 @@
         .person:hover {
             transform: translateY(-5px);
         }
+        .person-image-container {
+            width: 100%;
+            height: 250px; /* Fixed height for all image containers */
+            overflow: hidden;
+        }
         .person img {
             width: 100%;
-            height: 200px;
-            object-fit: cover;
+            height: 100%;
+            object-fit: cover; /* This will crop the image to fill the container */
+            object-position: center top; /* This will favor the top of the image (usually the face) */
         }
         .person-info {
             padding: 15px;
@@ -214,9 +220,11 @@
             <h3>Faculty</h3>
             <div class="people-grid">
                 <div class="person">
-                    <img src="./images/deepak.jpeg" alt="Dr. Deepak Mishra">
+                    <div class="person-image-container">
+                        <img src="./images/deepak.jpeg" alt="Dr. Deepak Mishra">
+                    </div>
                     <div class="person-info">
-                        <h3>Dr. Jane Doe</h3>
+                        <h3>Dr. Deepak Mishra</h3>
                         <p>Principal Investigator</p>
                         <p>Assistant Professor, Department of Computer Science and Engineering</p>
                         <div class="person-links">
@@ -233,9 +241,11 @@
             <h3>PhD Students</h3>
             <div class="people-grid">
                 <div class="person">
-                    <img src="./images/azad.png" alt="Azad Singh">
+                    <div class="person-image-container">
+                        <img src="./images/azad.png" alt="Azad Singh">
+                    </div>
                     <div class="person-info">
-                        <h3>John Smith</h3>
+                        <h3>Azad Singh</h3>
                         <p>Research focus: Medical Image Segmentation</p>
                         <div class="person-links">
                             <a href="#">Website</a>
@@ -245,9 +255,11 @@
                     </div>
                 </div>
                 <div class="person">
-                    <img src="./images/mayank.jpg" alt="Mayank Kumar">
+                    <div class="person-image-container">
+                        <img src="./images/mayank.jpg" alt="Mayank Kumar">
+                    </div>
                     <div class="person-info">
-                        <h3>Emily Johnson</h3>
+                        <h3>Mayank Kumar</h3>
                         <p>Research focus: Deep Learning for Radiomics</p>
                         <div class="person-links">
                             <a href="#">Website</a>
@@ -257,9 +269,11 @@
                     </div>
                 </div>
                 <div class="person">
-                    <img src="./images/aiman.jpg" alt="Aiman Farooq">
+                    <div class="person-image-container">
+                        <img src="./images/aiman.jpg" alt="Aiman Farooq">
+                    </div>
                     <div class="person-info">
-                        <h3>Michael Chen</h3>
+                        <h3>Aiman Farooq</h3>
                         <p>Research focus: AI-assisted Diagnosis</p>
                         <div class="person-links">
                             <a href="#">Website</a>
@@ -268,10 +282,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="person"></div>
-                    <img src="./images/Ishan.png" alt="Ishan Mishra">
+                <div class="person">
+                    <div class="person-image-container">
+                        <img src="./images/Ishan.png" alt="Ishan Mishra">
+                    </div>
                     <div class="person-info">
-                        <h3>Michael Chen</h3>
+                        <h3>Ishan Mishra</h3>
                         <p>Research focus: AI-assisted Diagnosis</p>
                         <div class="person-links">
                             <a href="#">Website</a>
@@ -280,10 +296,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="person"></div>
-                    <img src="./images/gajendra.jpeg" alt="Gajendra Singh">
+                <div class="person">
+                    <div class="person-image-container">
+                        <img src="./images/gajendra.jpeg" alt="Gajendra Singh">
+                    </div>
                     <div class="person-info">
-                        <h3>Michael Chen</h3>
+                        <h3>Gajendra Singh</h3>
                         <p>Research focus: AI-assisted Diagnosis</p>
                         <div class="person-links">
                             <a href="#">Website</a>
@@ -292,10 +310,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="person"></div>
-                    <img src="./images/sagar.jpg" alt="Sagar Shamanna">
+                <div class="person">
+                    <div class="person-image-container">
+                        <img src="./images/sagar.jpg" alt="Sagar Shamanna">
+                    </div>
                     <div class="person-info">
-                        <h3>Michael Chen</h3>
+                        <h3>Sagar Shamanna</h3>
                         <p>Research focus: AI-assisted Diagnosis</p>
                         <div class="person-links">
                             <a href="#">Website</a>
@@ -304,8 +324,6 @@
                         </div>
                     </div>
                 </div>
-
-
             </div>
         </div>
 
@@ -313,9 +331,11 @@
             <h3>MTech Students</h3>
             <div class="people-grid">
                 <div class="person">
-                    <img src="./images/placeholder-person4.jpg" alt="Deepan Mandal">
+                    <div class="person-image-container">
+                        <img src="./images/placeholder-person4.jpg" alt="Deepan Mandal">
+                    </div>
                     <div class="person-info">
-                        <h3>Alice Brown</h3>
+                        <h3>Deepan Mandal</h3>
                         <p>Research focus: AI in Radiology</p>
                         <div class="person-links">
                             <a href="#">Website</a>
@@ -325,9 +345,11 @@
                     </div>
                 </div>
                 <div class="person">
-                    <img src="./images/placeholder-person5.jpg" alt="Gyanendra Chaubey ">
+                    <div class="person-image-container">
+                        <img src="./images/gyandendera.jpeg" alt="Gyanendra Chaubey">
+                    </div>
                     <div class="person-info">
-                        <h3>David Lee</h3>
+                        <h3>Gyanendra Chaubey</h3>
                         <p>Research focus: Medical Image Enhancement</p>
                         <div class="person-links">
                             <a href="#">Website</a>
@@ -337,9 +359,11 @@
                     </div>
                 </div>
                 <div class="person">
-                    <img src="./images/placeholder-person6.jpg" alt="Shripad Arun Pate">
+                    <div class="person-image-container">
+                        <img src="./images/placeholder-person6.jpg" alt="Shripad Arun Pate">
+                    </div>
                     <div class="person-info">
-                        <h3>Sarah Patel</h3>
+                        <h3>Shripad Arun Pate</h3>
                         <p>Research focus: Federated Learning in Healthcare</p>
                         <div class="person-links">
                             <a href="#">Website</a>
