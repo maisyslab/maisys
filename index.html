@@ -86,9 +86,17 @@
             display: flex;
             justify-content: space-between;
             margin-top: 20px;
+            flex-wrap: wrap;
         }
-        .highlights, .announcements {
-            width: 48%;
+        .highlights {
+            width: 65%;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .announcements {
+            width: 32%;
             background-color: white;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -104,11 +112,15 @@
         .highlights ul, .announcements ul {
             list-style-type: none;
             padding: 0 20px;
+            margin: 0;
         }
         .highlights li, .announcements li {
             margin-bottom: 10px;
             border-bottom: 1px solid #eee;
             padding-bottom: 10px;
+        }
+        .highlights li:nth-child(n+4), .announcements li:nth-child(n+4) {
+            display: none;
         }
         .read-more {
             text-align: right;
@@ -119,6 +131,7 @@
             text-decoration: none;
             font-weight: bold;
             transition: color 0.3s ease;
+            cursor: pointer;
         }
         .read-more a:hover {
             color: var(--primary-color);
@@ -158,6 +171,12 @@
         }
         .social-link:hover .linkedin-icon {
             fill: var(--accent-color);
+        }
+        @media (max-width: 768px) {
+            .highlights, .announcements {
+                width: 100%;
+                margin-bottom: 20px;
+            }
         }
     </style>
 </head>
@@ -203,7 +222,7 @@
         <div class="highlights-announcements">
             <div class="highlights">
                 <h3>Research Highlights</h3>
-                <ul>
+                <ul id="highlightsList">
                     <li>Paper Title 1 - Published in Journal X, 2023</li>
                     <li>Paper Title 2 - Presented at Conference Y, 2023</li>
                     <li>Paper Title 3 - Published in Journal Z, 2022</li>
@@ -211,12 +230,12 @@
                     <li>Paper Title 5 - Published in Journal V, 2022</li>
                 </ul>
                 <div class="read-more">
-                    <a href="publications.html">Read more</a>
+                    <a onclick="toggleHighlights()">Read more</a>
                 </div>
             </div>
             <div class="announcements">
                 <h3>Announcements</h3>
-                <ul>
+                <ul id="announcementsList">
                     <li>Open PhD position in Medical Image Analysis - Apply by DD/MM/YYYY</li>
                     <li>MAISys team wins Best Paper Award at Conference X</li>
                     <li>New collaboration with Hospital Y on AI-assisted diagnostics</li>
@@ -224,7 +243,7 @@
                     <li>MAISys lab receives grant for project on federated learning in medical imaging</li>
                 </ul>
                 <div class="read-more">
-                    <a href="announcements.html">Read more</a>
+                    <a onclick="toggleAnnouncements()">Read more</a>
                 </div>
             </div>
         </div>
@@ -253,5 +272,39 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        function toggleHighlights() {
+            const list = document.getElementById('highlightsList');
+            const items = list.getElementsByTagName('li');
+            const readMoreLink = list.nextElementSibling.getElementsByTagName('a')[0];
+            
+            for (let i = 3; i < items.length; i++) {
+                if (items[i].style.display === 'none' || items[i].style.display === '') {
+                    items[i].style.display = 'block';
+                    readMoreLink.textContent = 'Show less';
+                } else {
+                    items[i].style.display = 'none';
+                    readMoreLink.textContent = 'Read more';
+                }
+            }
+        }
+
+        function toggleAnnouncements() {
+            const list = document.getElementById('announcementsList');
+            const items = list.getElementsByTagName('li');
+            const readMoreLink = list.nextElementSibling.getElementsByTagName('a')[0];
+            
+            for (let i = 3; i < items.length; i++) {
+                if (items[i].style.display === 'none' || items[i].style.display === '') {
+                    items[i].style.display = 'block';
+                    readMoreLink.textContent = 'Show less';
+                } else {
+                    items[i].style.display = 'none';
+                    readMoreLink.textContent = 'Read more';
+                }
+            }
+        }
+    </script>
 </body>
 </html>
