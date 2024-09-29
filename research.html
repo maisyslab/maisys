@@ -167,27 +167,28 @@
                 <div class="paper-title">MLVICX: Multi-Level Variance-Covariance Exploration for Chest X-ray Self-Supervised Representation Learning</div>
                 <div class="paper-authors">Azad Singh, Vandan Gorade, and Deepak Mishra</div>
                 <div class="paper-publication">IEEE Journal of Biomedical and Health Informatics, 2024</div>
-                <a href="https://ieeexplore.ieee.org/document/10666966" class="paper-link">View Paper</a>
+                <a href="https://ieeexplore.ieee.org/document/10666966" class="paper-link" target="_blank">View Paper</a>
             </div>
             <div class="paper-content">
                 <div class="paper-image">
                     <img src="./images/mlvicx.png" alt="MLVICX Architecture">
                 </div>
                 <div class="paper-abstract">
-                    <h3>Abstract</h3>
-                    <p>
-                    Self-supervised learning (SSL) is potentially useful in reducing the need for manual annotation and making deep learning models accessible for medical image analysis tasks. 
-                    By leveraging the representations learned from unlabeled data, self-supervised models perform well on tasks that require little to no fine-tuning. However, for medical images, 
-                    like chest X-rays, characterized by complex anatomical structures and diverse clinical conditions, a need arises for representation learning techniques that encode fine-grained 
-                    details while preserving the broader contextual information. In this context, we introduce MLVICX (Multi-Level Variance-Covariance Exploration for Chest X-ray Self-Supervised Representation Learning), 
-                    an approach to capture rich representations in the form of embeddings from chest X-ray images. Central to our approach is a novel multi-level variance and covariance exploration strategy that effectively 
-                    enables the model to detect diagnostically meaningful patterns while reducing redundancy. MLVICX promotes the retention of critical medical insights by adapting global and local contextual details and 
-                    enhancing the variance and covariance of the learned embeddings. We demonstrate the performance of MLVICX in advancing self-supervised chest X-ray representation learning through comprehensive experiments. 
-                    The performance enhancements we observe across various downstream tasks highlight the significance of the proposed approach in enhancing the utility of chest X-ray embeddings for precision medical diagnosis 
-                    and comprehensive image analysis. For pertaining, we used the NIH-Chest X-ray dataset, while for downstream tasks, we utilized NIH-Chest X-ray, Vinbig-CXR, RSNA pneumonia, and SIIM-ACR Pneumothorax datasets. 
-                    Overall, we observe up to 3% performance gain over SOTA SSL approaches in various downstream tasks. Additionally, to demonstrate the generalizability of the proposed method, we conducted additional experiments 
+                    <div class="abstract-content">
+                    Self-supervised learning (SSL) is potentially useful in reducing the need for manual annotation and making deep learning models accessible for medical image analysis tasks.
+                    By leveraging the representations learned from unlabeled data, self-supervised models perform well on tasks that require little to no fine-tuning. However, for medical images,
+                    like chest X-rays, characterized by complex anatomical structures and diverse clinical conditions, a need arises for representation learning techniques that encode fine-grained
+                    details while preserving the broader contextual information. In this context, we introduce MLVICX (Multi-Level Variance-Covariance Exploration for Chest X-ray Self-Supervised Representation Learning),
+                    an approach to capture rich representations in the form of embeddings from chest X-ray images. Central to our approach is a novel multi-level variance and covariance exploration strategy that effectively
+                    enables the model to detect diagnostically meaningful patterns while reducing redundancy. MLVICX promotes the retention of critical medical insights by adapting global and local contextual details and
+                    enhancing the variance and covariance of the learned embeddings. We demonstrate the performance of MLVICX in advancing self-supervised chest X-ray representation learning through comprehensive experiments.
+                    The performance enhancements we observe across various downstream tasks highlight the significance of the proposed approach in enhancing the utility of chest X-ray embeddings for precision medical diagnosis
+                    and comprehensive image analysis. For pertaining, we used the NIH-Chest X-ray dataset, while for downstream tasks, we utilized NIH-Chest X-ray, Vinbig-CXR, RSNA pneumonia, and SIIM-ACR Pneumothorax datasets.
+                    Overall, we observe up to 3% performance gain over SOTA SSL approaches in various downstream tasks. Additionally, to demonstrate the generalizability of the proposed method, we conducted additional experiments
                     on fundus images and observed superior performance on multiple datasets.
-                    </p>
+
+                    </div>
+                    <span class="read-more" onclick="toggleAbstract(this)">Read More</span>
                 </div>
             </div>
         </div>
@@ -197,23 +198,24 @@
                 <div class="paper-title">CoBooM: Codebook Guided Bootstrapping for Medical Image Representation Learning</div>
                 <div class="paper-authors">Azad Singh and Deepak Mishra</div>
                 <div class="paper-publication">MICCAI, 2024</div>
-                <a href="#" class="paper-link">View Paper</a>
+                <a href="#" class="paper-link" target="_blank">View Paper</a>
             </div>
             <div class="paper-content">
                 <div class="paper-image">
                     <img src="./images/paper2-architecture.jpg" alt="CoBooM Architecture">
                 </div>
                 <div class="paper-abstract">
-                    <h3>Abstract</h3>
-                    <p>
+                    <div class="abstract-content">
                         CoBooM introduces a novel approach to medical image representation learning using codebook-guided bootstrapping. 
                         This method leverages a learned codebook to guide the bootstrapping process, enhancing the quality of learned 
                         representations. Our experiments on various medical imaging datasets show that CoBooM significantly improves 
                         the performance of downstream tasks such as classification and segmentation.
-                    </p>
+                    </div>
+                    <span class="read-more" onclick="toggleAbstract(this)">Read More</span>
                 </div>
             </div>
         </div>
+
 
         <!-- Add more paper boxes as needed -->
 
