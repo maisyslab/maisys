@@ -5,34 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MAISys - Medical AI Systems Research Group</title>
     <style>
+        :root {
+            --primary-color: #003366;
+            --secondary-color: #0077be;
+            --accent-color: #ffd700;
+            --text-color: #333;
+            --bg-color: #f9f9f9;
+        }
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            color: #333;
+            color: var(--text-color);
+            background-color: var(--bg-color);
         }
         header {
-            background-color: #003366;
+            background-color: var(--primary-color);
             color: white;
             text-align: center;
             padding: 1rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
         }
         nav {
-            background-color: #f4f4f4;
+            background-color: var(--secondary-color);
             padding: 0.5rem;
+            text-align: center;
         }
         nav ul {
             list-style-type: none;
             padding: 0;
+            margin: 0;
         }
         nav ul li {
             display: inline;
-            margin-right: 10px;
+            margin-right: 20px;
         }
         nav ul li a {
             text-decoration: none;
-            color: #333;
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: var(--accent-color);
         }
         .container {
             width: 80%;
@@ -44,6 +64,100 @@
             width: 100%;
             max-height: 400px;
             object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h2, h3 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+        }
+        .research-focus li, .current-projects li {
+            margin-bottom: 15px;
+            background-color: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .container p, .container li {
+            text-align: justify;
+        }
+        .highlights-announcements {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .highlights, .announcements {
+            width: 48%;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .highlights h3, .announcements h3 {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px;
+            margin-top: 0;
+            text-align: center;
+        }
+        .highlights ul, .announcements ul {
+            list-style-type: none;
+            padding: 0 20px;
+        }
+        .highlights li, .announcements li {
+            margin-bottom: 10px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+        .read-more {
+            text-align: right;
+            margin: 10px 20px;
+        }
+        .read-more a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        .read-more a:hover {
+            color: var(--primary-color);
+        }
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .footer-section {
+            margin: 10px;
+            text-align: left;
+        }
+        .footer-section h4 {
+            color: var(--accent-color);
+            margin-bottom: 10px;
+        }
+        .social-link {
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .linkedin-icon {
+            width: 24px;
+            height: 24px;
+            fill: white;
+            transition: fill 0.3s ease;
+        }
+        .social-link:hover .linkedin-icon {
+            fill: var(--accent-color);
         }
     </style>
 </head>
@@ -62,19 +176,82 @@
         </ul>
     </nav>
     <div class="container">
-        <img src="/api/placeholder/1200/400" alt="Medical AI Research" class="hero-image">
+        <img src="./images/lab_index.jpeg" alt="Medical AI Research" class="hero-image">
         <h2>Advancing Medical Image Analysis through AI</h2>
         <p>At MAISys, we focus on developing and applying artificial intelligence techniques to improve medical image analysis. Our work aims to enhance diagnostic accuracy, treatment planning, and patient care through innovative machine learning approaches.</p>
         
         <h3>Our Research Focus</h3>
-        <p>Our research encompasses several key areas in medical AI. We are developing self-supervised learning techniques to leverage large volumes of unlabeled radiographs, aiming to improve diagnostic models with limited labeled data. In the field of radiogenomics, we are working on integrating multi-modal data, including medical images and electronic health records, to enhance cancer diagnosis and predict critical genomic mutations. Our work also extends to federated learning, addressing the challenges of data privacy and heterogeneity in medical imaging across institutions. We are exploring distributed learning techniques to enable collaborative model training while keeping patient data locally secured. Additionally, we are developing a semi-automatic standard echo image acquisition system, utilizing AI and robotics to assist in obtaining high-quality echocardiographic views, potentially reducing the physical strain on sonographers and improving image consistency.</p>
+        <ul class="research-focus">
+            <li><strong>Self-Supervised Learning for Medical Imaging:</strong> Developing techniques to leverage large volumes of unlabeled radiographs. This approach aims to improve diagnostic models with limited labeled data, enhancing the efficiency of medical image analysis.</li>
+            
+            <li><strong>AI for Radiogenomics:</strong> Integrating multi-modal data, including medical images and electronic health records, for cancer diagnosis. Our work focuses on predicting critical genomic mutations to guide personalized treatment plans.</li>
+            
+            <li><strong>Federated Learning in Medical Imaging:</strong> Addressing data privacy and heterogeneity challenges across healthcare institutions. We explore distributed learning techniques to enable collaborative model training while ensuring patient data remains locally secured.</li>
+            
+            <li><strong>Semi-Automatic Echo Image Acquisition:</strong> Developing AI-driven robotic systems for standard echocardiographic view acquisition. This project aims to reduce physical strain on sonographers and improve image consistency in cardiovascular diagnostics.</li>
+            
+            <li><strong>3D Medical Image Analysis:</strong> Creating deep learning models for tasks such as ribcage implant reconstruction from CT scans. Our goal is to automate and improve the accuracy of complex 3D medical image interpretation tasks.</li>
+        </ul>
 
         <h3>Current Projects</h3>
-        <ul>
-            <li>Ribcage Implant Reconstruction: Developing deep learning models to generate 3D implants from CT scans for rib cage reconstruction.</li>
-            <li>Automated Rib Fracture Detection: Creating machine learning models for the detection, localization, and characterization of traumatic rib fractures in CT scans.</li>
-            <li>Multi-Modal Cancer Survival Prediction: Integrating diverse data types to improve the accuracy of survival outcome predictions in cancer diagnosis.</li>
+        <ul class="current-projects">
+            <li><strong>Ribcage Implant Reconstruction:</strong> Developing deep learning models to generate 3D implants from CT scans for rib cage reconstruction.</li>
+            <li><strong>Automated Rib Fracture Detection:</strong> Creating machine learning models for the detection, localization, and characterization of traumatic rib fractures in CT scans.</li>
+            <li><strong>Multi-Modal Cancer Survival Prediction:</strong> Integrating diverse data types to improve the accuracy of survival outcome predictions in cancer diagnosis.</li>
         </ul>
+        
+        <div class="highlights-announcements">
+            <div class="highlights">
+                <h3>Research Highlights</h3>
+                <ul>
+                    <li>Paper Title 1 - Published in Journal X, 2023</li>
+                    <li>Paper Title 2 - Presented at Conference Y, 2023</li>
+                    <li>Paper Title 3 - Published in Journal Z, 2022</li>
+                    <li>Paper Title 4 - Presented at Conference W, 2022</li>
+                    <li>Paper Title 5 - Published in Journal V, 2022</li>
+                </ul>
+                <div class="read-more">
+                    <a href="publications.html">Read more</a>
+                </div>
+            </div>
+            <div class="announcements">
+                <h3>Announcements</h3>
+                <ul>
+                    <li>Open PhD position in Medical Image Analysis - Apply by DD/MM/YYYY</li>
+                    <li>MAISys team wins Best Paper Award at Conference X</li>
+                    <li>New collaboration with Hospital Y on AI-assisted diagnostics</li>
+                    <li>Upcoming workshop on Deep Learning in Healthcare - Register now</li>
+                    <li>MAISys lab receives grant for project on federated learning in medical imaging</li>
+                </ul>
+                <div class="read-more">
+                    <a href="announcements.html">Read more</a>
+                </div>
+            </div>
+        </div>
     </div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Medical AI Systems Lab<br>
+                Indian Institute of Technology Jodhpur<br>
+                NH 62, Nagaur Road, Karwar<br>
+                Jodhpur, Rajasthan 342037, India</p>
+            </div>
+            <div class="footer-section">
+                <h4>Get in Touch</h4>
+                <p>Email: maisys@iitj.ac.in<br>
+                Phone: +91 291 280 1234</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <a href="https://www.linkedin.com/company/maisys-iitj" class="social-link" target="_blank" aria-label="Follow us on LinkedIn">
+                    <svg class="linkedin-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
