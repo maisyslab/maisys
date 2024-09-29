@@ -107,17 +107,39 @@
         .paper-image {
             flex: 1;
             min-width: 300px;
-            max-width: 100%;
+            max-width: 300px;
+            height: 200px;
             margin-right: 20px;
+            overflow: hidden;
         }
         .paper-image img {
             width: 100%;
-            height: auto;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
             border-radius: 5px;
         }
         .paper-abstract {
             flex: 2;
             min-width: 300px;
+        }
+        .abstract-content {
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            text-align: justify;
+        }
+        .abstract-content.expanded {
+            -webkit-line-clamp: unset;
+        }
+        .read-more {
+            color: var(--secondary-color);
+            cursor: pointer;
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
         }
         footer {
             background-color: var(--primary-color);
@@ -175,18 +197,17 @@
                 </div>
                 <div class="paper-abstract">
                     <div class="abstract-content">
-                    Self-supervised learning (SSL) is potentially useful in reducing the need for manual annotation and making deep learning models accessible for medical image analysis tasks.
-                    By leveraging the representations learned from unlabeled data, self-supervised models perform well on tasks that require little to no fine-tuning. However, for medical images,
-                    like chest X-rays, characterized by complex anatomical structures and diverse clinical conditions, a need arises for representation learning techniques that encode fine-grained
-                    details while preserving the broader contextual information. In this context, we introduce MLVICX (Multi-Level Variance-Covariance Exploration for Chest X-ray Self-Supervised Representation Learning),
-                    an approach to capture rich representations in the form of embeddings from chest X-ray images. Central to our approach is a novel multi-level variance and covariance exploration strategy that effectively
-                    enables the model to detect diagnostically meaningful patterns while reducing redundancy. MLVICX promotes the retention of critical medical insights by adapting global and local contextual details and
-                    enhancing the variance and covariance of the learned embeddings. We demonstrate the performance of MLVICX in advancing self-supervised chest X-ray representation learning through comprehensive experiments.
-                    The performance enhancements we observe across various downstream tasks highlight the significance of the proposed approach in enhancing the utility of chest X-ray embeddings for precision medical diagnosis
-                    and comprehensive image analysis. For pertaining, we used the NIH-Chest X-ray dataset, while for downstream tasks, we utilized NIH-Chest X-ray, Vinbig-CXR, RSNA pneumonia, and SIIM-ACR Pneumothorax datasets.
-                    Overall, we observe up to 3% performance gain over SOTA SSL approaches in various downstream tasks. Additionally, to demonstrate the generalizability of the proposed method, we conducted additional experiments
-                    on fundus images and observed superior performance on multiple datasets.
-
+                        Self-supervised learning (SSL) is potentially useful in reducing the need for manual annotation and making deep learning models accessible for medical image analysis tasks. 
+                        By leveraging the representations learned from unlabeled data, self-supervised models perform well on tasks that require little to no fine-tuning. However, for medical images, 
+                        like chest X-rays, characterized by complex anatomical structures and diverse clinical conditions, a need arises for representation learning techniques that encode fine-grained 
+                        details while preserving the broader contextual information. In this context, we introduce MLVICX (Multi-Level Variance-Covariance Exploration for Chest X-ray Self-Supervised Representation Learning), 
+                        an approach to capture rich representations in the form of embeddings from chest X-ray images. Central to our approach is a novel multi-level variance and covariance exploration strategy that effectively 
+                        enables the model to detect diagnostically meaningful patterns while reducing redundancy. MLVICX promotes the retention of critical medical insights by adapting global and local contextual details and 
+                        enhancing the variance and covariance of the learned embeddings. We demonstrate the performance of MLVICX in advancing self-supervised chest X-ray representation learning through comprehensive experiments. 
+                        The performance enhancements we observe across various downstream tasks highlight the significance of the proposed approach in enhancing the utility of chest X-ray embeddings for precision medical diagnosis 
+                        and comprehensive image analysis. For pertaining, we used the NIH-Chest X-ray dataset, while for downstream tasks, we utilized NIH-Chest X-ray, Vinbig-CXR, RSNA pneumonia, and SIIM-ACR Pneumothorax datasets. 
+                        Overall, we observe up to 3% performance gain over SOTA SSL approaches in various downstream tasks. Additionally, to demonstrate the generalizability of the proposed method, we conducted additional experiments 
+                        on fundus images and observed superior performance on multiple datasets.
                     </div>
                     <span class="read-more" onclick="toggleAbstract(this)">Read More</span>
                 </div>
@@ -216,7 +237,6 @@
             </div>
         </div>
 
-
         <!-- Add more paper boxes as needed -->
 
     </div>
@@ -242,5 +262,13 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        function toggleAbstract(element) {
+            const abstractContent = element.previousElementSibling;
+            abstractContent.classList.toggle('expanded');
+            element.textContent = abstractContent.classList.contains('expanded') ? 'Read Less' : 'Read More';
+        }
+    </script>
 </body>
 </html>
