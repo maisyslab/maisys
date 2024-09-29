@@ -126,7 +126,7 @@
         }
         .abstract-content {
             display: -webkit-box;
-            -webkit-line-clamp: 4;
+            -webkit-line-clamp: 8;
             -webkit-box-orient: vertical;
             overflow: hidden;
             transition: all 0.3s ease;
@@ -227,18 +227,56 @@
                 <div class="paper-title">CoBooM: Codebook Guided Bootstrapping for Medical Image Representation Learning</div>
                 <div class="paper-authors">Azad Singh and Deepak Mishra</div>
                 <div class="paper-publication">MICCAI, 2024</div>
-                <a href="#" class="paper-link" target="_blank">View Paper</a>
+                <a href="https://arxiv.org/abs/2408.04262" class="paper-link" target="_blank">View Paper</a>
             </div>
             <div class="paper-content">
                 <div class="paper-image">
-                    <img src="./images/paper2-architecture.jpg" alt="CoBooM Architecture">
+                    <img src="./images/cobom.png" alt="CoBooM Architecture">
                 </div>
                 <div class="paper-abstract">
                     <div class="abstract-content">
-                        CoBooM introduces a novel approach to medical image representation learning using codebook-guided bootstrapping. 
-                        This method leverages a learned codebook to guide the bootstrapping process, enhancing the quality of learned 
-                        representations. Our experiments on various medical imaging datasets show that CoBooM significantly improves 
-                        the performance of downstream tasks such as classification and segmentation.
+                    Self-supervised learning (SSL) has emerged as a promising paradigm for medical image analysis by harnessing unannotated data. Despite their potential, the existing SSL approaches overlook the high anatomical similarity inherent in medical images. This makes it challenging for SSL 
+                    methods to capture diverse semantic content in medical images consistently. This work introduces a novel and generalized solution that implicitly exploits anatomical similarities by integrating codebooks in SSL. The codebook serves as a concise and informative dictionary of visual 
+                    patterns, which not only aids in capturing nuanced anatomical details but also facilitates the creation of robust and generalized feature representations. In this context, we propose CoBooM, a novel framework for self-supervised medical image learning by integrating continuous 
+                    and discrete representations. The continuous component ensures the preservation of fine-grained details, while the discrete aspect facilitates coarse-grained feature extraction through the structured embedding space. To understand the effectiveness of CoBooM, we conduct a comprehensive 
+                    evaluation of various medical datasets encompassing chest X-rays and fundus images. The experimental results reveal a significant performance gain in classification and segmentation tasks. 
+                    </div>
+                    <span class="read-more" onclick="toggleAbstract(this)">Read More</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="paper-box"></div>
+            <div class="paper-info">
+                <div class="paper-title">IDQCE: Instance Discrimination Learning through Quantized Contextual Embeddings for Medical Images</div>
+                <div class="paper-authors">Azad Singh and Deepak Mishra</div>
+                <div class="paper-publication">ICPR, 2024</div>
+                <a href="https://arxiv.org/abs/2408.04262" class="paper-link" target="_blank">View Paper</a>
+            </div>
+            <div class="paper-content">
+                <div class="paper-image">
+                    <img src="./images/IPID.png" alt="CoBooM Architecture">
+                </div>
+                <div class="paper-abstract">
+                    <div class="abstract-content">
+                        Self-supervised pre-training is effective in learning discrim-
+                        inative features from unlabeled medical images. However, typical self-
+                        supervised models lead to sub-optimal representations due to negligence
+                        of high anatomical similarity present in the medical images. This af-
+                        fects the negative and positive pairs in discriminative self-supervised
+                        models to learn view-invariant representations. Various methods are pro-
+                        posed to address this issue. However, many of them either concentrate
+                        on preserving pixel-level details or offer solutions for specific modali-
+                        ties. In this context, we propose a generalized solution to leverage the
+                        anatomical similarities while relaxing the requirements of complex pixel-
+                        preservation learning. Specifically, we introduce IDQCE: Instance Dis-
+                        crimination Learning through Quantized Contextual Embeddings. The
+                        proposed approach leverages the sparse discrete contextual information
+                        to guide the self-supervised framework to learn more informative repre-
+                        sentations for medical images. We evaluate the representations learned
+                        by IDQCE through comprehensive experiments and observe more than
+                        3% performance gain under linear evaluation protocol over other SOTA
+                        approaches in multiple downstream tasks.
                     </div>
                     <span class="read-more" onclick="toggleAbstract(this)">Read More</span>
                 </div>
