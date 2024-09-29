@@ -286,7 +286,7 @@
         <div class="paper-box"></div>
             <div class="paper-info">
                 <div class="paper-title">Large Scale Time-Series Representation Learning via Simultaneous Low- and High-Frequency Feature Bootstrapping</div>
-                <div class="paper-authors">Vandan Gorade*, Azad Singh* and Deepak Mishra (* Equal Contribution)</div>
+                <div class="paper-authors">Vandan Gorade, Azad Singh (Equal Contribution) and Deepak Mishra </div>
                 <div class="paper-publication">IEEE, Transactions on Neural Networks and Learning Systems 2023</div>
                 <a href="https://ieeexplore.ieee.org/document/10329573" class="paper-link" target="_blank">View Paper</a>
             </div>
@@ -296,34 +296,19 @@
                 </div>
                 <div class="paper-abstract">
                     <div class="abstract-content">
-                        Learning representations from unlabeled time series
-                        data is a challenging problem. Most existing self-supervised
-                        and unsupervised approaches in the time-series domain fall
-                        short in capturing low- and high-frequency features at the
-                        same time. As a result, the generalization ability of the learned
-                        representations remains limited. Furthermore, some of these
-                        methods employ large-scale models like transformers or rely
-                        on computationally expensive techniques such as contrastive
-                        learning. To tackle these problems, we propose a non-contrastive
-                        self-supervised learning approach that efficiently captures low-
-                        and high-frequency features in a cost-effective manner. The
-                        proposed framework comprises a siamese configuration of a deep
-                        neural network with two weight-sharing branches which are
-                        followed by low- and high-frequency feature extraction modules.
-                        The two branches of the proposed network allow bootstrapping
-                        of the latent representation by taking two different augmented
-                        views of raw time series data as input. The augmented views
-                        are created by applying random transformations sampled from
-                        a single set of augmentations. The low- and high-frequency
-                        feature extraction modules of the proposed network contain
-                        a combination of multilayer perceptron (MLP) and temporal
-                        convolutional network (TCN) heads respectively, which capture
-                        the temporal dependencies from the raw input data at various
-                        scales due to the varying receptive fields. To demonstrate the
-                        robustness of our model, we performed extensive experiments
-                        and ablation studies on five real-world time-series datasets. Our
-                        method achieves state-of-art performance on all the considered
-                        datasets
+                        Learning representations from unlabeled time series data is a challenging problem. Most existing self-supervised
+                        and unsupervised approaches in the time-series domain fall short in capturing low- and high-frequency features at the same time. As a result, the generalization ability of the learned
+                        representations remains limited. Furthermore, some of these methods employ large-scale models like transformers or rely
+                        on computationally expensive techniques such as contrastive learning. To tackle these problems, we propose a non-contrastive
+                        self-supervised learning approach that efficiently captures low-and high-frequency features in a cost-effective manner. The
+                        proposed framework comprises a siamese configuration of a deep neural network with two weight-sharing branches which are
+                        followed by low- and high-frequency feature extraction modules. The two branches of the proposed network allow bootstrapping of the latent representation by taking two different augmented
+                        views of raw time series data as input. The augmented views are created by applying random transformations sampled from
+                        a single set of augmentations. The low- and high-frequency feature extraction modules of the proposed network contain
+                        a combination of multilayer perceptron (MLP) and temporal convolutional network (TCN) heads respectively, which capture
+                        the temporal dependencies from the raw input data at various scales due to the varying receptive fields. To demonstrate the
+                        robustness of our model, we performed extensive experiments and ablation studies on five real-world time-series datasets. Our
+                        method achieves state-of-art performance on all the considered datasets.
                     </div>
                     <span class="read-more" onclick="toggleAbstract(this)">Read More</span>
                 </div>
