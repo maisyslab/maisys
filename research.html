@@ -190,26 +190,36 @@
         .footer-content {
             display: flex;
             justify-content: space-around;
-            align-items: center;
+            align-items: flex-start;
             flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
         }
         .footer-section {
             margin: 10px;
+            text-align: left;
+        }
+        .footer-section h4 {
+            color: var(--accent-color);
+            margin-bottom: 10px;
         }
         .social-link {
-            color: white;
-            font-size: 24px;
-            margin-left: 10px;
-            transition: color 0.3s ease;
+            display: inline-block;
+            margin-top: 10px;
         }
-        .social-link:hover {
-            color: var(--accent-color);
+        .linkedin-icon {
+            width: 24px;
+            height: 24px;
+            fill: white;
+            transition: fill 0.3s ease;
+        }
+        .social-link:hover .linkedin-icon {
+            fill: var(--accent-color);
         }
         @media (max-width: 768px) {
-            .paper-image {
-                max-width: 100%;
-                max-height: none;
-                height: auto;
+            .highlights, .announcements {
+                width: 100%;
+                margin-bottom: 20px;
             }
         }
     </style>
