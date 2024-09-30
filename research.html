@@ -362,6 +362,26 @@
             </div>
         </div>
 
+        <div class="paper-box"></div>
+            <div class="paper-info">
+                <div class="paper-title">BAFL: Federated Learning with Base Ablation for Cost Effective Communication</div>
+                <div class="paper-authors">Mayank Kumar, Anurag Saraswat, Ishan Mishra and Deepak Mishra </div>
+                <div class="paper-publication">ICPR 2022</div>
+                <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9956684" class="paper-link" target="_blank">View Paper</a>
+            </div>
+            <div class="paper-content">
+                <div class="paper-image">
+                    <img src="./images/new1.png" alt="mtbyol Architecture">
+                </div>
+                <div class="paper-abstract">
+                    <div class="abstract-content">
+                        Federated learning is a distributed machine learning setting in which clients train a global model on their local data and share their knowledge with the server in form of the trained model while maintaining privacy of the data. The server aggregates clients' knowledge to create a generalized global model. Two major challenges faced in this process are data heterogeneity and high communication cost. We target the latter and propose a simple approach, BAFL (Federated Learning for Base Ablation) for cost effective communication in federated learning. In contrast to the common practice of employing model compression techniques to reduce the total communication cost, we propose a fine-tuning approach to leverage the feature extraction ability of layers at different depths of deep neural networks. We use a model pretrained on general-purpose large scale data as a global model. This helps in better weight initialization and reduces the total communication cost required for obtaining the generalized model. We achieve further cost reduction by focusing only on the layers responsible for semantic features (data specific information). The clients fine tune only top layers on their local data. Base layers are ablated while transferring the model and clients communicate parameters corresponding to the remaining layers. This results in reduction of communication cost per round without compromising the accuracy. We evaluate the proposed approach using VGG-16 and ResNet-50 models on datasets including WBC, FOOD-101, and CIFAR-10 and obtain up to two orders of reduction in total communication cost as compared to the conventional federated learning. We perform experiments in both IID and Non-IID settings and observe consistent improvements.
+                    </div>
+                    <span class="read-more" onclick="toggleAbstract(this)">Read More</span>
+                </div>
+            </div>
+        </div>
+
         <div class="paper-box">
             <div class="paper-info">
                 <div class="paper-title">Branching Out for Better BYOL</div>
