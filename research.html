@@ -238,7 +238,49 @@
     </nav>
     <div class="container">
         <h2>Our Research</h2>
-        
+                <div class="paper-box">
+            <div class="paper-info">
+                <div class="paper-title">Survival Prediction in Lung Cancer through Multi-Modal Representation Learning</div>
+                <div class="paper-authors">Aiman Farooq,Deepak Mishra and Santanu Chaudhury</div>
+                <div class="paper-publication">WACV, 2025</div>
+                <a href="#" class="paper-link" target="_blank">View Paper</a>
+            </div>
+            <div class="paper-content">
+                <div class="paper-image">
+                    <img src="./images/final15.drawio.png" alt="WACVArch">
+                </div>
+                <div class="paper-abstract">
+                    <div class="abstract-content">
+                        Survival prediction is a crucial task associated with can-
+                        cer diagnosis and treatment planning. This paper presents
+                        a novel approach to survival prediction by harnessing com-
+                        prehensive information from CT and PET scans, along with
+                        associated Genomic data. Current methods rely on either
+                        a single modality or the integration of multiple modalities
+                        for prediction without adequately addressing associations
+                        across patients or modalities. We aim to develop a ro-
+                        bust predictive model for survival outcomes by integrating
+                        multi-modal imaging data with genetic information while
+                        accounting for associations across patients and modali-
+                        ties. We learn representations for each modality via a self-
+                        supervised module and harness the semantic similarities
+                        across the patients to ensure the embeddings are aligned
+                        closely. However, optimizing solely for global relevance
+                        is inadequate, as many pairs sharing similar high-level
+                        semantics, such as tumor type, are inadvertently pushed
+                        apart in the embedding space. To address this issue, we
+                        use a cross-patient module (CPM) designed to harness
+                        inter-subject correspondences. The CPM module aims to
+                        bring together embeddings from patients with similar dis-
+                        ease characteristics. Our experimental evaluation of the
+                        dataset of Non-Small Cell Lung Cancer (NSCLC) patients
+                        demonstrates the effectiveness of our approach in predicting
+                        survival outcomes, outperforming state-of-the-art methods
+                    </div>
+                    <span class="read-more" onclick="toggleAbstract(this)">Read More</span>
+                </div>
+            </div>
+        </div>
         <div class="paper-box">
             <div class="paper-info">
                 <div class="paper-title">MLVICX: Multi-Level Variance-Covariance Exploration for Chest X-ray Self-Supervised Representation Learning</div>
