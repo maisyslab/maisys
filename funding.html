@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research - MAISys Research Group</title>
+    <style>
+        :root {
+            --primary-color: #003366;
+            --secondary-color: #0077be;
+            --accent-color: #ffd700;
+            --text-color: #333;
+            --bg-color: #f9f9f9;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        nav {
+            background-color: var(--secondary-color);
+            padding: 0.5rem;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: var(--accent-color);
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+        }
+        .paper-box {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+        .paper-info {
+            padding: 20px;
+        }
+        .paper-title {
+            font-size: 1.4em;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        .paper-authors {
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        .paper-publication {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .paper-link {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .paper-link:hover {
+            background-color: var(--primary-color);
+        }
+        .paper-content {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+            align-items: flex-start;
+        }
+        .paper-image {
+            flex: 0 1 auto;
+            max-width: 400px;
+            max-height: 300px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+        .paper-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .paper-abstract {
+            flex: 1;
+            min-width: 300px;
+        }
+        .abstract-content {
+            display: -webkit-box;
+            -webkit-line-clamp: 8;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            text-align: justify;
+        }
+        .abstract-content.expanded {
+            -webkit-line-clamp: unset;
+        }
+        .read-more {
+            color: var(--secondary-color);
+            cursor: pointer;
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        .gallery {
+            margin-top: 40px;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px;
+            font-size: 0.9em;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .gallery-item:hover .gallery-caption {
+            opacity: 1;
+        }
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .footer-section {
+            margin: 10px;
+            text-align: left;
+        }
+        .footer-section h4 {
+            color: var(--accent-color);
+            margin-bottom: 10px;
+        }
+        .social-link {
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .linkedin-icon {
+            width: 24px;
+            height: 24px;
+            fill: white;
+            transition: fill 0.3s ease;
+        }
+        .social-link:hover .linkedin-icon {
+            fill: var(--accent-color);
+        }
+        @media (max-width: 768px) {
+            .highlights, .announcements {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Medical AI Systems (MAISys)</h1>
+        <p>Research Group at Indian Institute of Technology Jodhpur, India</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="people.html">People</a></li>
+            <li><a href="funding.html">Funding</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h2>Current Projects</h2>
+        <ul class="current-projects">
+            <li><strong>Ribcage Implant Reconstruction:</strong> Developing deep learning models to generate 3D implants from CT scans for rib cage reconstruction.</li>
+            <li><strong>Automated Rib Fracture Detection:</strong> Creating machine learning models for the detection, localization, and characterization of traumatic rib fractures in CT scans.</li>
+            <li><strong>Multi-Modal Cancer Survival Prediction:</strong> Integrating diverse data types to improve the accuracy of survival outcome predictions in cancer diagnosis.</li>
+        </ul>
+
+    </div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Medical AI Systems Group, 217A CSE Department<br>
+                Indian Institute of Technology Jodhpur<br>
+                NH 62, Nagaur Road, Karwar<br>
+                Jodhpur, Rajasthan 342030, India</p>
+            </div>
+            <div class="footer-section">
+                <h4>Get in Touch</h4>
+                <p>Email: dmishra@iitj.ac.in<br>
+                Phone: +91 291 280 1234</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <a href="https://www.linkedin.com/company/maisys-iitj" class="social-link" target="_blank" aria-label="Follow us on LinkedIn">
+                    <svg class="linkedin-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleAbstract(element) {
+            const abstractContent = element.previousElementSibling;
+            abstractContent.classList.toggle('expanded');
+            element.textContent = abstractContent.classList.contains('expanded') ? 'Read Less' : 'Read More';
+        }
+    </script>
+</body>
+</html>
