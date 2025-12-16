@@ -281,25 +281,75 @@
         <h2>Our Research</h2>
         <div class="paper-box">
             <div class="paper-info">
-                <div class="paper-title">Enhanced Survival Prediction in Head and Neck Cancer</div>
-                <div class="paper-authors">Aiman Farooq, Utkarsh Sharma, and Deepak Mishra </div>
-                <div class="paper-publication">ACCVW, 2024</div>
-                <a href="https://openaccess.thecvf.com/content/ACCV2024W/WiCV/papers/Farooq_Enhanced_Survival_Prediction_in_Head_and_Neck_Cancer_Using_Convolutional_ACCVW_2024_paper.pdf" class="paper-link" target="_blank">View Paper</a>
+                <div class="paper-title">Fine-Grained Rib Fracture Diagnosis with Hyperbolic Embeddings: A Detailed Annotation Framework and Multi-label Classification Model</div>
+                <div class="paper-authors">Shripad Pate*,Aiman Farooq*,and Deepak Mishra</div>
+                <div class="paper-publication">MICCAI, 2025</div>
+                <a href="https://link.springer.com/chapter/10.1007/978-3-032-05182-0_22" class="paper-link" target="_blank">View Paper</a>
             </div>
             <div class="paper-content">
                 <div class="paper-image">
-                    <img src="./images/final3.png" alt="ACCVArch">
+                    <img src="./images/model8.drawio.png" alt="MICCAIArch">
                 </div>
                 <div class="paper-abstract">
                     <div class="abstract-content">
-                        Accurate survival prediction in head and neck cancer (HNC) is essential for guiding clinical decision-making and optimizing treatment strategies. Traditional models, such as Cox proportional hazards, have been widely used but are limited in their ability to handle complex multimodal data. This paper proposes a deep learning-based approach leveraging CT and PET imaging modalities to predict survival outcomes in HNC patients. Our method integrates feature extraction with a Convolutional Block Attention Module (CBAM) and a multi-modal data fusion layer that combines imaging data to generate a compact feature representation. The final prediction is achieved through a fully parametric discrete-time survival model, allowing for flexible hazard functions that overcome the limitations of traditional survival models. We evaluated our approach using the HECKTOR and HEAD-NECK-RADIOMICSHN1 datasets, demonstrating its superior performance compared to conventional statistical and machine learning models. The results indicate that our deep learning model significantly improves survival prediction accuracy, offering a robust tool for personalized treatment planning in HNC.
+                        ccurate rib fracture identification and classification are es-
+sential for treatment planning. However, existing datasets often lack fine-
+grained annotations, particularly regarding rib fracture characterization,
+type, and precise anatomical location on individual ribs. To address this,
+we introduce a novel rib fracture annotation protocol tailored for fracture
+classification. Further, we enhance fracture classification by leveraging
+cross-modal embeddings that bridge radiological images and clinical de-
+scriptions. Our approach employs hyperbolic embeddings to capture the
+hierarchical nature of fracture, mapping visual features and textual de-
+scriptions into a shared non-Euclidean manifold. This framework enables
+more nuanced similarity computations between imaging characteristics
+and clinical descriptions, accounting for the inherent hierarchical rela-
+tionships in fracture taxonomy. Experimental results demonstrate that
+our approach outperforms existing methods across multiple classification
+tasks, with average recall improvements of 6% on the AirRib dataset and
+17.5% on the public RibFrac dataset. The code and annotation files can
+be accessed at https://github.com/ribfracture123/classification
                     </div>
                     <span class="read-more" onclick="toggleAbstract(this)">Read More</span>
                 </div>
             </div>
-        </div>
+ </div>
         
-        <div class="paper-box">
+         <div class="paper-box">
+            <div class="paper-info">
+                <div class="paper-title">Uncertainty-Aware Cross-Modal Attention for
+Breast Cancer Classification in Ultrasound
+Imaging</div>
+                <div class="paper-authors">Aiman Farooq*,Chandisha Das*, and Deepak Mishra</div>
+                <div class="paper-publication">DeepBreath@MICCAI, 2025</div>
+                <a href="https://link.springer.com/chapter/10.1007/978-3-032-05559-0_22" class="paper-link" target="_blank">View Paper</a>
+            </div>
+            <div class="paper-content">
+                <div class="paper-image">
+                    <img src="./images/tt.png" alt="DeepArch">
+                </div>
+                <div class="paper-abstract">
+                    <div class="abstract-content">
+                        We propose an uncertainty-aware cross-modal attention frame-
+work for breast cancer classification using ultrasound imaging and struc-
+tured clinical data. Our model incorporates a Clinical Knowledge Gate
+(CKG) that adaptively weights clinical features based on medical domain
+relevance, and an uncertainty-aware attention mechanism that dynam-
+ically fuses modalities based on confidence estimates. We employ con-
+trastive learning to enhance alignment between modalities and address
+class imbalance through an adaptive focal loss with uncertainty regu-
+larization. Evaluated on the Breast-Lesions-USG dataset, our method
+outperforms traditional and deep learning baselines, achieving 90% ac-
+curacy and 98% recall. Grad-CAM visualizations confirm alignment with
+radiological markers, while uncertainty estimates improve interpretabil-
+ity and clinical trust.
+                    </div>
+                    <span class="read-more" onclick="toggleAbstract(this)">Read More</span>
+                </div>
+            </div>
+ </div>
+        
+ <div class="paper-box">
             <div class="paper-info">
                 <div class="paper-title">Survival Prediction in Lung Cancer through Multi-Modal Representation Learning</div>
                 <div class="paper-authors">Aiman Farooq,Deepak Mishra and Santanu Chaudhury</div>
@@ -341,7 +391,66 @@
                     <span class="read-more" onclick="toggleAbstract(this)">Read More</span>
                 </div>
             </div>
+ </div>
+        
+
+ <div class="paper-box">
+            <div class="paper-info">
+                <div class="paper-title">Leveraging Auxiliary Classification for Rib FractureSegmentation</div>
+                <div class="paper-authors">Harini G*.Aiman Farooq*,and Deepak Mishra </div>
+                <div class="paper-publication">ICVGIP, 2024</div>
+                <a href="https://ui.adsabs.harvard.edu/abs/2024arXiv241109283H/abstract" class="paper-link" target="_blank">View Paper</a>
+            </div>
+            <div class="paper-content">
+                <div class="paper-image">
+                    <img src="./images/net.png" alt="ICVGIPArch">
+                </div>
+                <div class="paper-abstract">
+                    <div class="abstract-content">
+                        Thoracic trauma often results in rib fractures, which demand swift
+and accurate diagnosis for effective treatment. However, detect-
+ing these fractures on rib CT scans poses considerable challenges,
+involving the analysis of many image slices in sequence. Despite
+notable advancements in algorithms for automated fracture seg-
+mentation, the persisting challenges stem from the diverse shapes
+and sizes of these fractures. To address these issues, this study
+introduces a sophisticated deep-learning model with an auxiliary
+classification task designed to enhance the accuracy of rib frac-
+ture segmentation. The auxiliary classification task is crucial in
+distinguishing between fractured ribs and negative regions, en-
+compassing non-fractured ribs and surrounding tissues, from the
+patches obtained from CT scans. By leveraging this auxiliary task,
+the model aims to improve feature representation at the bottleneck
+layer by highlighting the regions of interest. Experimental results
+on the RibFrac dataset demonstrate significant improvement in
+segmentation performance
+                    </div>
+                    <span class="read-more" onclick="toggleAbstract(this)">Read More</span>
+                </div>
+            </div>
+ </div>
+        
+        <div class="paper-box">
+            <div class="paper-info">
+                <div class="paper-title">Enhanced Survival Prediction in Head and Neck Cancer</div>
+                <div class="paper-authors">Aiman Farooq, Utkarsh Sharma, and Deepak Mishra </div>
+                <div class="paper-publication">ACCVW, 2024</div>
+                <a href="https://openaccess.thecvf.com/content/ACCV2024W/WiCV/papers/Farooq_Enhanced_Survival_Prediction_in_Head_and_Neck_Cancer_Using_Convolutional_ACCVW_2024_paper.pdf" class="paper-link" target="_blank">View Paper</a>
+            </div>
+            <div class="paper-content">
+                <div class="paper-image">
+                    <img src="./images/final3.png" alt="ACCVArch">
+                </div>
+                <div class="paper-abstract">
+                    <div class="abstract-content">
+                        Accurate survival prediction in head and neck cancer (HNC) is essential for guiding clinical decision-making and optimizing treatment strategies. Traditional models, such as Cox proportional hazards, have been widely used but are limited in their ability to handle complex multimodal data. This paper proposes a deep learning-based approach leveraging CT and PET imaging modalities to predict survival outcomes in HNC patients. Our method integrates feature extraction with a Convolutional Block Attention Module (CBAM) and a multi-modal data fusion layer that combines imaging data to generate a compact feature representation. The final prediction is achieved through a fully parametric discrete-time survival model, allowing for flexible hazard functions that overcome the limitations of traditional survival models. We evaluated our approach using the HECKTOR and HEAD-NECK-RADIOMICSHN1 datasets, demonstrating its superior performance compared to conventional statistical and machine learning models. The results indicate that our deep learning model significantly improves survival prediction accuracy, offering a robust tool for personalized treatment planning in HNC.
+                    </div>
+                    <span class="read-more" onclick="toggleAbstract(this)">Read More</span>
+                </div>
+            </div>
         </div>
+        
+       
         <div class="paper-box">
             <div class="paper-info">
                 <div class="paper-title">MLVICX: Multi-Level Variance-Covariance Exploration for Chest X-ray Self-Supervised Representation Learning</div>
