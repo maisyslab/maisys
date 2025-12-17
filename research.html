@@ -253,7 +253,7 @@
     </nav>
     <div class="container">
          <!-- Image Carousel -->
-         <div id="imageCarousel" class="carousel slide" data-ride="carousel">
+         <!-- <div id="imageCarousel" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#imageCarousel" data-slide-to="0" class="active"></li>
                 <li data-target="#imageCarousel" data-slide-to="1"></li>
@@ -277,8 +277,27 @@
                 <span class="sr-only">Next</span>
             </a>
             
+        </div> -->
+        <!-- <h2>Our Research</h2> -->
+        <div class="paper-box">
+            <div class="paper-info">
+                <div class="paper-title">Guide2Heart: Proximity Guidance for Standard Echocardiographic View</div>
+                <div class="paper-authors">Gajendra Singh, Aiman Farooq, Azad Singh, Deepak Mishra, Dr. Rahul Choudhary and Dr. Pushpinder Singh Khera </div>
+                <div class="paper-publication">ASMUS @ MICCAI, 2025</div>
+                <a href="https://doi.org/10.1007/978-3-032-06329-8_18" class="paper-link" target="_blank">View Paper</a>
+            </div>
+            <div class="paper-content">
+                <div class="paper-image">
+                    <img src="./images/asmus_2025.png" alt="ASMUS MICCAI 2025">
+                </div>
+                <div class="paper-abstract">
+                    <div class="abstract-content">
+                        We introduce Guide2Heart, a unique dataset comprising labelled ultrasound images for echocardiographic guidance. It targets the Parasternal Long-Axis (PLAX) view, a clinically key cardiac imaging plane. The labelled data consists of four categories—Standard PLAX, Almost PLAX, Nearby PLAX, and Away from PLAX. Our dataset facilitates the development of real-time view-proximity-based guidance systems that assist echocardiographers in efficiently acquiring the standard PLAX view. Specifically, Guide2Heart includes 3322 ultrasound images from 67 studies conducted on 23 subjects. To validate the effectiveness of our dataset, we conduct multiple experiments using various CNN models and a ViT network, reporting K-fold cross-validation results. Our experimental findings highlight the potential for automated guidance in acquiring standard echocardiographic views, ultimately improving the efficiency and standardization of echocardiographic examinations.
+                    </div>
+                    <span class="read-more" onclick="toggleAbstract(this)">Read More</span>
+                </div>
+            </div>
         </div>
-        <h2>Our Research</h2>
         <div class="paper-box">
             <div class="paper-info">
                 <div class="paper-title">Fine-Grained Rib Fracture Diagnosis with Hyperbolic Embeddings: A Detailed Annotation Framework and Multi-label Classification Model</div>
@@ -293,33 +312,34 @@
                 <div class="paper-abstract">
                     <div class="abstract-content">
                         ccurate rib fracture identification and classification are es-
-sential for treatment planning. However, existing datasets often lack fine-
-grained annotations, particularly regarding rib fracture characterization,
-type, and precise anatomical location on individual ribs. To address this,
-we introduce a novel rib fracture annotation protocol tailored for fracture
-classification. Further, we enhance fracture classification by leveraging
-cross-modal embeddings that bridge radiological images and clinical de-
-scriptions. Our approach employs hyperbolic embeddings to capture the
-hierarchical nature of fracture, mapping visual features and textual de-
-scriptions into a shared non-Euclidean manifold. This framework enables
-more nuanced similarity computations between imaging characteristics
-and clinical descriptions, accounting for the inherent hierarchical rela-
-tionships in fracture taxonomy. Experimental results demonstrate that
-our approach outperforms existing methods across multiple classification
-tasks, with average recall improvements of 6% on the AirRib dataset and
-17.5% on the public RibFrac dataset. The code and annotation files can
-be accessed at https://github.com/ribfracture123/classification
+                        sential for treatment planning. However, existing datasets often lack fine-
+                        grained annotations, particularly regarding rib fracture characterization,
+                        type, and precise anatomical location on individual ribs. To address this,
+                        we introduce a novel rib fracture annotation protocol tailored for fracture
+                        classification. Further, we enhance fracture classification by leveraging
+                        cross-modal embeddings that bridge radiological images and clinical de-
+                        scriptions. Our approach employs hyperbolic embeddings to capture the
+                        hierarchical nature of fracture, mapping visual features and textual de-
+                        scriptions into a shared non-Euclidean manifold. This framework enables
+                        more nuanced similarity computations between imaging characteristics
+                        and clinical descriptions, accounting for the inherent hierarchical rela-
+                        tionships in fracture taxonomy. Experimental results demonstrate that
+                        our approach outperforms existing methods across multiple classification
+                        tasks, with average recall improvements of 6% on the AirRib dataset and
+                        17.5% on the public RibFrac dataset. The code and annotation files can
+                        be accessed at https://github.com/ribfracture123/classification
                     </div>
                     <span class="read-more" onclick="toggleAbstract(this)">Read More</span>
                 </div>
             </div>
- </div>
+        </div>
         
          <div class="paper-box">
             <div class="paper-info">
                 <div class="paper-title">Uncertainty-Aware Cross-Modal Attention for
-Breast Cancer Classification in Ultrasound
-Imaging</div>
+                    Breast Cancer Classification in Ultrasound
+                    Imaging
+                </div>
                 <div class="paper-authors">Aiman Farooq*,Chandisha Das*, and Deepak Mishra</div>
                 <div class="paper-publication">DeepBreath@MICCAI, 2025</div>
                 <a href="https://link.springer.com/chapter/10.1007/978-3-032-05559-0_22" class="paper-link" target="_blank">View Paper</a>
