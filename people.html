@@ -5,140 +5,250 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>People - MAISys Research Group</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
-<body>
+<body class="bg-gray-50 text-gray-800 font-sans leading-relaxed">
     <div id="header-placeholder"></div>
     <div id="nav-placeholder"></div>
-    <div class="container">
-        <h2>Our Team</h2>
 
-        <div class="people-category">
-            <h3>Faculty</h3>
-            <div class="people-grid">
-                <div class="person">
-                    <div class="person-image-container">
-                        <img src="./images/deepak.jpeg" alt="Dr. Deepak Mishra">
+    <div class="max-w-6xl mx-auto px-4 py-8">
+        <h2 class="text-3xl font-bold text-[#003366] mb-8 border-b-2 border-[#ffd700] pb-2">Our Team</h2>
+
+        <div class="mb-12">
+            <h3 class="text-2xl font-bold text-[#003366] mb-6">Faculty</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div
+                    class="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden animate-on-scroll border border-gray-100">
+                    <div class="h-80 overflow-hidden relative bg-gray-200">
+                        <img src="./images/deepak.jpeg" alt="Dr. Deepak Mishra"
+                            class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+                        <div
+                            class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#003366] to-transparent opacity-90">
+                        </div>
+                        <div class="absolute bottom-4 left-6 right-6 text-white">
+                            <h3 class="text-2xl font-bold mb-1">Dr. Deepak Mishra</h3>
+                            <p class="text-[#ffd700] font-medium text-sm">Principal Investigator</p>
+                        </div>
                     </div>
-                    <div class="person-info">
-                        <h3>Dr. Deepak Mishra</h3>
-                        <p>Principal Investigator</p>
-                        <p>Assistant Professor, Department of Computer Science and Engineering</p>
-                        <div class="person-links">
-                            <a href="http://home.iitj.ac.in/~dmishra">Website</a>
-                            <a href="https://scholar.google.com/citations?user=-rOCu6sAAAAJ&hl=en&authuser=2">Google
-                                Scholar</a>
-                            <a href="mailto:dmishra@iitj.ac.in">Email</a>
+                    <div class="p-6">
+                        <p class="text-sm text-gray-600 mb-6 leading-relaxed">Associate Professor, Department of
+                            Computer Science and Engineering</p>
+                        <div class="flex gap-5">
+                            <a href="http://home.iitj.ac.in/~dmishra" target="_blank"
+                                class="text-gray-400 hover:text-[#003366] transition-colors text-xl" title="Website"><i
+                                    class="fas fa-globe"></i></a>
+                            <a href="https://scholar.google.com/citations?user=-rOCu6sAAAAJ&hl=en&authuser=2" target="_blank"
+                                class="text-gray-400 hover:text-[#003366] transition-colors text-xl"
+                                title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                            <a href="mailto:dmishra@iitj.ac.in" target="_blank"
+                                class="text-gray-400 hover:text-[#003366] transition-colors text-xl" title="Email"><i
+                                    class="fas fa-envelope"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="people-category">
-            <h3>PhD Students</h3>
-            <div class="people-grid">
-                <div class="person">
-                    <div class="person-image-container">
-                        <img src="./images/aiman.jpg" alt="Aiman Farooq">
+        <div class="mb-12">
+            <h3 class="text-2xl font-bold text-[#003366] mb-6">PhD Students</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Aiman Farooq -->
+                <div
+                    class="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden animate-on-scroll border border-gray-100">
+                    <div class="h-72 overflow-hidden relative bg-gray-200">
+                        <img src="./images/aiman.jpg" alt="Aiman Farooq"
+                            class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+                        <div class="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black/80 to-transparent">
+                        </div>
+                        <div class="absolute bottom-4 left-6 text-white">
+                            <h3 class="text-xl font-bold">Aiman Farooq</h3>
+                        </div>
                     </div>
-                    <div class="person-info">
-                        <h3>Aiman Farooq</h3>
-                        <p>Research focus: Radiogenomics, Self-supervised Learning</p>
-                        <div class="person-links">
-                            <a href="https://sites.google.com/iitj.ac.in/aimanfarooq/home?authuser=0"
-                                target="_blank">Website</a>
-                            <a href="https://scholar.google.com/citations?user=yrBmlBkAAAAJ&hl=en"
-                                target="_blank">Google Scholar</a>
-                            <a href="https://www.linkedin.com/in/aimanfarooqwani/" target="_blank">LinkedIn</a>
-                            <a href="https://x.com/aiman_farooqwn" target="_blank">Twitter</a>
+                    <div class="p-6">
+                        <p class="text-sm text-gray-600 mb-4">Research focus: Radiogenomics, Self-supervised Learning
+                        </p>
+                        <div class="flex gap-4">
+                            <a href="https://sites.google.com/iitj.ac.in/aimanfarooq/home?authuser=0" target="_blank"
+                                class="text-gray-400 hover:text-[#003366] transition-colors text-lg" title="Website"><i
+                                    class="fas fa-globe"></i></a>
+                            <a href="https://scholar.google.com/citations?user=yrBmlBkAAAAJ&hl=en" target="_blank"
+                                class="text-gray-400 hover:text-[#003366] transition-colors text-lg"
+                                title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                            <a href="https://www.linkedin.com/in/aimanfarooqwani/" target="_blank"
+                                class="text-gray-400 hover:text-[#003366] transition-colors text-lg" title="LinkedIn"><i
+                                    class="fab fa-linkedin"></i></a>
+                            <a href="https://x.com/aiman_farooqwn" target="_blank"
+                                class="text-gray-400 hover:text-[#003366] transition-colors text-lg" title="Twitter"><i
+                                    class="fab fa-twitter"></i></a>
                         </div>
                     </div>
                 </div>
-                <div class="person">
-                    <div class="person-image-container">
-                        <img src="./images/azad.png" alt="Azad Singh">
+
+                <!-- Azad Singh -->
+                <div
+                    class="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden animate-on-scroll border border-gray-100">
+                    <div class="h-72 overflow-hidden relative bg-gray-200">
+                        <img src="./images/azad.png" alt="Azad Singh"
+                            class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+                        <div class="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black/80 to-transparent">
+                        </div>
+                        <div class="absolute bottom-4 left-6 text-white">
+                            <h3 class="text-xl font-bold">Azad Singh</h3>
+                        </div>
                     </div>
-                    <div class="person-info">
-                        <h3>Azad Singh</h3>
-                        <p>Research focus: Self-supervised Learning for Medical Images</p>
-                        <div class="person-links">
-                            <a href="https://singh6359.wixsite.com/azad">Website</a>
-                            <a href="https://www.linkedin.com/in/azad-mehla-87775b19a/">LinkedIn</a>
-                            <a href="https://scholar.google.com/citations?user=D0HlgOcAAAAJ&hl=en">Google Scholar</a>
-                            <a href="mailto:singh.63@iitj.ac.in">Email</a>
+                    <div class="p-6">
+                        <p class="text-sm text-gray-600 mb-4 h-10 line-clamp-2">Research focus: Self-supervised Learning
+                            for Medical Images</p>
+                        <div class="flex gap-4">
+                            <a href="https://singh6359.wixsite.com/azad" target="_blank"
+                                class="text-gray-400 hover:text-[#003366] transition-colors text-lg" title="Website"><i
+                                    class="fas fa-globe"></i></a>
+                            <a href="https://scholar.google.com/citations?user=D0HlgOcAAAAJ&hl=en" target="_blank"
+                                class="text-gray-400 hover:text-[#003366] transition-colors text-lg"
+                                title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                            <a href="https://www.linkedin.com/in/azad-mehla-87775b19a/" target="_blank"
+                                class="text-gray-400 hover:text-[#003366] transition-colors text-lg" title="LinkedIn"><i
+                                    class="fab fa-linkedin"></i></a>
+                            <a href="mailto:singh.63@iitj.ac.in"
+                                class="text-gray-400 hover:text-[#003366] transition-colors text-lg" title="Email"><i
+                                    class="fas fa-envelope"></i></a>
                         </div>
                     </div>
                 </div>
-                <div class="person">
-                    <div class="person-image-container">
-                        <img src="./images/gajendra.jpeg" alt="Gajendra Singh">
+
+                <!-- Gajendra Singh -->
+                <div
+                    class="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden animate-on-scroll border border-gray-100">
+                    <div class="h-72 overflow-hidden relative bg-gray-200">
+                        <img src="./images/gajendra.jpeg" alt="Gajendra Singh"
+                            class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+                        <div class="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black/80 to-transparent">
+                        </div>
+                        <div class="absolute bottom-4 left-6 text-white">
+                            <h3 class="text-xl font-bold">Gajendra Singh</h3>
+                        </div>
                     </div>
-                    <div class="person-info">
-                        <h3>Gajendra Singh</h3>
-                        <p>Research Topic: Development of Standard Echo Image Acquistion System</p>
-                        <div class="person-links">
-                            <a href="https://gajendrasingh.netlify.app/" target="_blank">Website</a>
-                            <a href="https://www.linkedin.com/in/gajendrasingh1995/" target="_blank">LinkedIn</a>
-                            <a href="mailto:singh.117@iitj.ac.in">Email</a>
+                    <div class="p-6">
+                        <p class="text-sm text-gray-600 mb-4 h-10 line-clamp-2">Research Topic: Development of Standard
+                            Echo Image Acquistion System</p>
+                        <div class="flex gap-4">
+                            <a href="https://gajendrasingh.netlify.app/" target="_blank"
+                                class="text-gray-400 hover:text-[#003366] transition-colors text-lg" title="Website"><i
+                                    class="fas fa-globe"></i></a>
+                            <a href="https://www.linkedin.com/in/gajendrasingh1995/" target="_blank"
+                                class="text-gray-400 hover:text-[#003366] transition-colors text-lg" title="LinkedIn"><i
+                                    class="fab fa-linkedin"></i></a>
+                            <a href="mailto:singh.117@iitj.ac.in" target="_blank"
+                                class="text-gray-400 hover:text-[#003366] transition-colors text-lg" title="Email"><i
+                                    class="fas fa-envelope"></i></a>
                         </div>
                     </div>
                 </div>
-                <div class="person">
-                    <div class="person-image-container">
-                        <img src="./images/Ishan.png" alt="Ishan Mishra">
+
+                <!-- Ishan Mishra -->
+                <div
+                    class="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden animate-on-scroll border border-gray-100">
+                    <div class="h-72 overflow-hidden relative bg-gray-200">
+                        <img src="./images/Ishan.png" alt="Ishan Mishra"
+                            class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+                        <div class="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black/80 to-transparent">
+                        </div>
+                        <div class="absolute bottom-4 left-6 text-white">
+                            <h3 class="text-xl font-bold">Ishan Mishra</h3>
+                        </div>
                     </div>
-                    <div class="person-info">
-                        <h3>Ishan Mishra</h3>
-                        <p>Research focus: Bayesian neural networks, lifelong learning</p>
-                        <div class="person-links">
-                            <a href="#">Website</a>
-                            <a href="#">LinkedIn</a>
-                            <a href="#">Email</a>
+                    <div class="p-6">
+                        <p class="text-sm text-gray-600 mb-4 h-10 line-clamp-2">Research focus: Bayesian neural
+                            networks, lifelong learning</p>
+                        <div class="flex gap-4">
+                            <a href="#" target="_blank" class="text-gray-400 hover:text-[#003366] transition-colors text-lg"
+                                title="Website"><i class="fas fa-globe"></i></a>
+                            <a href="#" target="_blank" class="text-gray-400 hover:text-[#003366] transition-colors text-lg"
+                                title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" target="_blank" class="text-gray-400 hover:text-[#003366] transition-colors text-lg"
+                                title="Email"><i class="fas fa-envelope"></i></a>
                         </div>
                     </div>
                 </div>
-                <div class="person">
-                    <div class="person-image-container">
-                        <img src="./images/mayank.png" alt="Mayank Kumar">
+
+                <!-- Mayank Kumar -->
+                <div
+                    class="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden animate-on-scroll border border-gray-100">
+                    <div class="h-72 overflow-hidden relative bg-gray-200">
+                        <img src="./images/mayank.png" alt="Mayank Kumar"
+                            class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+                        <div class="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black/80 to-transparent">
+                        </div>
+                        <div class="absolute bottom-4 left-6 text-white">
+                            <h3 class="text-xl font-bold">Mayank Kumar</h3>
+                        </div>
                     </div>
-                    <div class="person-info">
-                        <h3>Mayank Kumar</h3>
-                        <p>Research focus: Federated Learning for data heterogeneity</p>
-                        <div class="person-links">
-                            <a href="#">Website</a>
-                            <a href="https://www.linkedin.com/in/hostingshades">LinkedIn/</a>
-                            <a href="mailto:kundalwal.1@iitj.ac.in">Email</a>
+                    <div class="p-6">
+                        <p class="text-sm text-gray-600 mb-4 h-10 line-clamp-2">Research focus: Federated Learning for
+                            data heterogeneity</p>
+                        <div class="flex gap-4">
+                            <a href="#" target="_blank" class="text-gray-400 hover:text-[#003366] transition-colors text-lg"
+                                title="Website"><i class="fas fa-globe"></i></a>
+                            <a href="https://www.linkedin.com/in/hostingshades" target="_blank"
+                                class="text-gray-400 hover:text-[#003366] transition-colors text-lg" title="LinkedIn"><i
+                                    class="fab fa-linkedin"></i></a>
+                            <a href="mailto:kundalwal.1@iitj.ac.in" target="_blank"
+                                class="text-gray-400 hover:text-[#003366] transition-colors text-lg" title="Email"><i
+                                    class="fas fa-envelope"></i></a>
                         </div>
                     </div>
                 </div>
-                <div class="person">
-                    <div class="person-image-container">
-                        <img src="./images/sagar.jpg" alt="Sagar Shamanna">
+
+                <!-- Sagar Shamanna -->
+                <div
+                    class="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden animate-on-scroll border border-gray-100">
+                    <div class="h-72 overflow-hidden relative bg-gray-200">
+                        <img src="./images/sagar.jpg" alt="Sagar Shamanna"
+                            class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+                        <div class="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black/80 to-transparent">
+                        </div>
+                        <div class="absolute bottom-4 left-6 text-white">
+                            <h3 class="text-xl font-bold">Sagar Shamanna</h3>
+                        </div>
                     </div>
-                    <div class="person-info">
-                        <h3>Sagar Shamanna</h3>
-                        <p>Research focus: Causal Inferences</p>
-                        <div class="person-links">
-                            <a href="#">Website</a>
-                            <a href="#">LinkedIn</a>
-                            <a href="#">Email</a>
+                    <div class="p-6">
+                        <p class="text-sm text-gray-600 mb-4 h-10 line-clamp-2">Research focus: Causal Inferences</p>
+                        <div class="flex gap-4">
+                            <a href="#" class="text-gray-400 hover:text-[#003366] transition-colors text-lg"
+                                title="Website"><i class="fas fa-globe"></i></a>
+                            <a href="#" class="text-gray-400 hover:text-[#003366] transition-colors text-lg"
+                                title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-gray-400 hover:text-[#003366] transition-colors text-lg"
+                                title="Email"><i class="fas fa-envelope"></i></a>
                         </div>
                     </div>
                 </div>
-                <div class="person">
-                    <div class="person-image-container">
-                        <img src="./images/zahid.jpeg" alt="Zahid Mansur">
+
+                <!-- Zahid Mansur -->
+                <div
+                    class="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden animate-on-scroll border border-gray-100">
+                    <div class="h-72 overflow-hidden relative bg-gray-200">
+                        <img src="./images/zahid.jpeg" alt="Zahid Mansur"
+                            class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+                        <div class="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black/80 to-transparent">
+                        </div>
+                        <div class="absolute bottom-4 left-6 text-white">
+                            <h3 class="text-xl font-bold">Zahid Mansur</h3>
+                        </div>
                     </div>
-                    <div class="person-info">
-                        <h3>Zahid Mansur</h3>
-                        <p>-</p>
-                        <div class="person-links">
-                            <a href="#">Website</a>
-                            <a href=" https://www.linkedin.com/in/zahid-mansur-40a36018a/">LinkedIn</a>
-                            <a href="mailto:p24cs0203@iitj.ac.in">Email</a>
+                    <div class="p-6">
+                        <p class="text-sm text-gray-600 mb-4 h-10 line-clamp-2">-</p>
+                        <div class="flex gap-4">
+                            <a href="#" target="_blank" class="text-gray-400 hover:text-[#003366] transition-colors text-lg"
+                                title="Website"><i class="fas fa-globe"></i></a>
+                            <a href=" https://www.linkedin.com/in/zahid-mansur-40a36018a/" target="_blank"
+                                class="text-gray-400 hover:text-[#003366] transition-colors text-lg" title="LinkedIn"><i
+                                    class="fab fa-linkedin"></i></a>
+                            <a href="mailto:p24cs0203@iitj.ac.in" target="_blank"
+                                class="text-gray-400 hover:text-[#003366] transition-colors text-lg" title="Email"><i
+                                    class="fas fa-envelope"></i></a>
                         </div>
                     </div>
                 </div>
@@ -146,320 +256,179 @@
             </div>
         </div>
 
-
-
-
-        <div class="people-category">
-            <h3>M.Tech Students</h3>
-            <table class="alumni-table">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-
-                        <th>Research Area</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr></tr>
-                    <td>Arkya Jyoti Bagchi</td>
-
-                    <td>Report Generation for 3D Medical Scans</td>
-                    </tr>
-                    <tr></tr>
-                    <td>Ritul Jangir</td>
-
-                    <td>3D Video Editing for Medical Sccans</td>
-                    </tr>
-                    <tr></tr>
-                    <td>Shantanu Sharma</td>
-
-                    <td>Echocardiography</td>
-                    </tr>
-                    <tr></tr>
-                    <td>Suvigya Sharma</td>
-
-                    <td>-</td>
-                    </tr>
-
-                    <tr></tr>
-                    <td>Chirugudu Noah Sujiv Raj </td>
-
-                    <td>TBD</td>
-                    </tr>
-                    <tr></tr>
-                    <td>Dwivedi Jyoti Rajeshbhai</td>
-
-                    <td>Federated Learning</td>
-                    </tr>
-                    <tr></tr>
-                    <td>Eshani Ravindra Sawant</td>
-
-                    <td>TBD</td>
-                    </tr>
-                    <tr></tr>
-                    <td>Mangalton Okram </td>
-
-                    <td>TBD</td>
-                    </tr>
-
-                </tbody>
-            </table>
-        </div>
-        <div class="people-category">
-            <h3>Alumni</h3>
-            <table class="alumni-table">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Degree</th>
-                        <th>Graduation Year</th>
-                        <th>Current Position</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr></tr>
-                    <td>Manaswi Vichare</td>
-                    <td>M.Tech</td>
-                    <td>2025</td>
-                    <td>Software Development Engineer @ Morabu Hanshim Industry Co., Ltd. Japan</td>
-                    </tr>
-                    <tr></tr>
-                    <td>Shripad Pate</td>
-                    <td>M.Tech</td>
-                    <td>2025</td>
-                    <td>Machine Learning Engineer @ 73 Strings</td>
-                    </tr>
-                    <tr></tr>
-                    <td>Gyanendra Chaubey</td>
-                    <td>M.Tech</td>
-                    <td>2025</td>
-                    <td>AI Reserach Engineer @ Brainwave science</td>
-                    </tr>
-                    <tr></tr>
-                    <td>Deepan Mondal</td>
-                    <td>M.Tech</td>
-                    <td>2025</td>
-                    <td>AI System Engineer @ Pradhi AI</td>
-                    </tr>
-                    <tr></tr>
-                    <td>Harini G</td>
-                    <td>M.Tech</td>
-                    <td>2024</td>
-                    <td>Senior Computer Vision Engineer @FastCode AI , <i>Prev. Computer Vision Engineer @ Awiros </i>
-                    </td>
-                    </tr>
-                    <tr></tr>
-                    <td>Satwik Srivastava</td>
-                    <td>M.Tech</td>
-                    <td>2023</td>
-                    <td>Computer Vision and Deep Learning Engineer @ MBRDI</td>
-                    </tr>
-                    <tr>
-                        <td>Anurag Saraswat</td>
-                        <td>M.Tech</td>
-                        <td>2022</td>
-                        <td>Software Engineer @ Teradata</td>
-                    </tr>
-                    <tr>
-                        <td>Jaideep Singh Heer</td>
-                        <td>MTech</td>
-                        <td>2022</td>
-                        <td>Sr. Soft. Engineer @ Optum</td>
-                    </tr>
-                    <tr>
-                        <td>Atanu Guin</td>
-                        <td>Intern</td>
-                        <td>2021</td>
-                        <td>Specialist Data Scientist @ AT&T</td>
-                    </tr>
-                    <tr>
-                        <td>Vandan Gorade</td>
-                        <td>Intern</td>
-                        <td>2023</td>
-                        <td>PhD student at Northwestern University</td>
-                    </tr>
-                    <tr>
-                        <td>Priyal Khapra</td>
-                        <td>Intern</td>
-                        <td>2023</td>
-                        <td>MS student at Texas A&M University</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="gallery">
-            <h3>Gallery</h3>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="./images/MICCAI_25_1.jfif" alt="GA @ MICCAI'24">
-                    <div class="gallery-caption">
-                        Aiman and Gajendra attending MICCAI 2025 at Daejeon, Republic of Korea
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="./images/MICCAI_25_2.jfif" alt="GA @ MICCAI'24">
-                    <div class="gallery-caption">
-                        Gajendra receives the best poster runner-up award at ASMUS MICCAI2025.
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="./images/aiman_miccai.jpeg" alt="GA @ MICCAI'24">
-                    <div class="gallery-caption"></div>
-                    Aiman presenting her work at main track MICCAI 2025
-                </div>
-                <div class="gallery-item">
-                    <img src="./images/MICCAI_25_3.jfif" alt="GA @ MICCAI'24">
-                    <div class="gallery-caption"></div>
-                    Aiman presenting her work at the DeepBreath Workshop at MICCAI 2025
-                </div>
-                <div class="gallery-item">
-                    <img src="./images/MICCAI_25_4.jfif" alt="GA @ MICCAI'24">
-                    <div class="gallery-caption"></div>
-                    Aiman giving an oral talk at the Supporters event at MICCAI 2025
-                </div>
-
-
-                <div class="gallery-item">
-                    <img src="./images/miccai2025 (1).jpg" alt="GA @ MICCAI'24">
-                    <div class="gallery-caption">
-                        Gajendra presenting at ASMUS MICCAI2025 (Daejeon, Republic of Korea).
-                    </div>
-                </div>
-                <!-- <div class="gallery-item">
-                    <img src="./images/miccai2025 (2).jpg" alt="GA @ MICCAI'24">
-                    <div class="gallery-caption"></div>
-                </div> -->
-                <div class="gallery-item">
-                    <img src="./images/miccai2025 (3).jpg" alt="GA @ MICCAI'24">
-                    <div class="gallery-caption">
-                        Gajendra meeting with Prof. Nassir Navab at MICCAI2025 (Daejeon, Republic of Korea).
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="./images/miccai2025 (4).jpg" alt="GA @ MICCAI'24">
-                    <div class="gallery-caption">
-                        Gajendra meeting with Dr. Stephen Aylward (NVIDIA) at MICCAI2025 (Daejeon, Republic of Korea).
-                    </div>
-                </div>
-
-                <div class="gallery-item">
-                    <img src="./images/miccai_1.jpg" alt="Azad @ MICCAI'24">
-                    <div class="gallery-caption"></div>
-                </div>
-                <div class="gallery-item">
-                    <img src="./images/miccai_2.jpg" alt="Azad @ MICCAI'24">
-                    <div class="gallery-caption"></div>
-                </div>
-                <div class="gallery-item">
-                    <img src="./images/miccai_3.jpg" alt="Azad @ MICCAI'24">
-                    <div class="gallery-caption"></div>
-                </div>
-                <div class="gallery-item">
-                    <img src="./images/miccai_4.jpg" alt="Azad @ MICCAI'24">
-                    <div class="gallery-caption"></div>
-                </div>
-                <div class="gallery-item">
-                    <img src="./images/gallary.jpg" alt="Lab outing">
-                    <div class="gallery-caption"></div>
-                </div>
-                <div class="gallery-item">
-                    <img src="./images/aiman_cvpr.jpeg" alt="Aiman @ CVPR">
-                    <div class="gallery-caption"></div>
-                    Aiman presenting her poster at CVPR2024.
-                </div>
-                <div class="gallery-item">
-                    <img src="./images/aiman_cvpr2.jpeg" alt="Aiman @ CVPR">
-
-                    <div class="gallery-caption">
-                        Aiman attending CVPR 2024 Seattle.
-                    </div>
-                </div>
-
-                <div class="gallery-item">
-                    <img src="./images/medtech1.jpeg" alt="Aiman @ CVPR">
-                    <div class="gallery-caption"></div>
-
-                </div>
-                <div class="gallery-item">
-                    <img src="./images/medtech2.jpeg" alt="Aiman @ CVPR">
-                    <div class="gallery-caption">
-                        Gajendra at Gopalakrishnan-Deshpande Centre for Innovation and Entrepreneurship (GDC) I-NDUCT
-                        program
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="./images/medtech0.jpg" alt="Aiman @ CVPR">
-                    <div class="gallery-caption"> Gajendra is facilitated by Director IIT Jodhpur for completing GDC
-                        I-NDUCT program</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="./images/medtech4.jpeg" alt="Aiman @ CVPR">
-                    <div class="gallery-caption">
-                        Gajendra presentating FlashTalk at IEEE SAUS 2024 Conference
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="./images/medtech5.jpeg" alt="Aiman @ CVPR">
-                    <div class="gallery-caption">
-                        Gajendra presentating Poster at IEEE SAUS 2024 Conference
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="./images/medtech6.jpg" alt="Aiman @ CVPR">
-                    <div class="gallery-caption">
-                        Gajendra meeting with teams from IIMA Ventures, Neos Angels, Marwari Catalyst, GOAT Brand Labs,
-                        iStart at Startup mixer (Founder's meet)
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="./images/medtech7.jpeg" alt="Aiman @ CVPR">
-                    <div class="gallery-caption">
-                        Gajendra at Indian Conference on MedTech Innovations (ICMI) 2024
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="./images/medtech8.jpeg" alt="Aiman @ CVPR">
-                    <div class="gallery-caption">Gajendra at ICMI Exhibition 2024 representing Visionence Tech Pvt. Ltd.
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="./images/medtech9.jpeg" alt="Aiman @ CVPR">
-                    <div class="gallery-caption">
-                        Gajendra at Summit for Health Equity: Spotlight on Digital Health in association with Libra
-                        Social Research Foundation
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="./images/medtech10.jpeg" alt="Aiman @ CVPR">
-                    <div class="gallery-caption">
-                        Gajendra at Stanford University Biodesign Bootcamp as Student Executive Committee member
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="./images/medtech11.jpeg" alt="Aiman @ CVPR">
-                    <div class="gallery-caption">
-                        Gajendra presenting to Dr. R Chidambaram, Chairman of Board of Governors, IITJ
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="./images/medtech12.jpeg" alt="Aiman @ CVPR">
-                    <div class="gallery-caption">
-                        Gajendra at the Meeting with Dr. R Chidambaram, Chairman of Board of Governors, IITJ at TISC,
-                        IITJ
-                    </div>
-                </div>
-                <!-- <div class="gallery-item">
-                    <img src="./images/gallery-3.jpg" alt="Lab celebration">
-                    <div class="gallery-caption"></div>
-                </div>
-                <div class="gallery-item">
-                    <img src="./images/gallery-4.jpg" alt="Guest lecture">
-                    <div class="gallery-caption"></div>
-                </div> -->
+        <div class="mb-12">
+            <h3 class="text-2xl font-bold text-[#003366] mb-6">M.Tech Students</h3>
+            <div class="overflow-x-auto bg-white rounded-lg shadow-md">
+                <table class="w-full border-collapse">
+                    <thead class="bg-[#0077be] text-white">
+                        <tr>
+                            <th class="py-3 px-6 text-left border-r border-[#0066a3] last:border-r-0">Name</th>
+                            <th class="py-3 px-6 text-left">Research Area</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-700">
+                        <tr class="border-b hover:bg-gray-50">
+                            <td class="py-3 px-6 border-r">Arkya Jyoti Bagchi</td>
+                            <td class="py-3 px-6">Report Generation for 3D Medical Scans</td>
+                        </tr>
+                        <tr class="border-b bg-gray-50 hover:bg-gray-100">
+                            <td class="py-3 px-6 border-r">Ritul Jangir</td>
+                            <td class="py-3 px-6">3D Video Editing for Medical Scans</td>
+                        </tr>
+                        <tr class="border-b hover:bg-gray-50">
+                            <td class="py-3 px-6 border-r">Shantanu Sharma</td>
+                            <td class="py-3 px-6">Echocardiography</td>
+                        </tr>
+                        <tr class="border-b bg-gray-50 hover:bg-gray-100">
+                            <td class="py-3 px-6 border-r">Suvigya Sharma</td>
+                            <td class="py-3 px-6">-</td>
+                        </tr>
+                        <tr class="border-b hover:bg-gray-50">
+                            <td class="py-3 px-6 border-r">Chirugudu Noah Sujiv Raj</td>
+                            <td class="py-3 px-6">TBD</td>
+                        </tr>
+                        <tr class="border-b bg-gray-50 hover:bg-gray-100">
+                            <td class="py-3 px-6 border-r">Dwivedi Jyoti Rajeshbhai</td>
+                            <td class="py-3 px-6">Federated Learning</td>
+                        </tr>
+                        <tr class="border-b hover:bg-gray-50">
+                            <td class="py-3 px-6 border-r">Eshani Ravindra Sawant</td>
+                            <td class="py-3 px-6">TBD</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 bg-gray-50 hover:bg-gray-100">
+                            <td class="py-3 px-6 border-r">Mangalton Okram</td>
+                            <td class="py-3 px-6">TBD</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
+
+        <div class="mb-12">
+            <h3 class="text-2xl font-bold text-[#003366] mb-6">Alumni</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Manaswi Vichare -->
+                <div
+                    class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 p-6 border-l-4 border-[#0077be] animate-on-scroll bg-gradient-to-r from-gray-50 to-white">
+                    <h4 class="text-xl font-bold text-[#003366] mb-2">Manaswi Vichare</h4>
+                    <div
+                        class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full mb-4 border border-blue-400">
+                        M.Tech 2025</div>
+                    <p class="text-sm text-gray-700 leading-relaxed font-medium">Software Development Engineer @ Morabu
+                        Hanshim Industry Co., Ltd. Japan</p>
+                </div>
+
+                <!-- Shripad Pate -->
+                <div
+                    class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 p-6 border-l-4 border-[#0077be] animate-on-scroll bg-gradient-to-r from-gray-50 to-white">
+                    <h4 class="text-xl font-bold text-[#003366] mb-2">Shripad Pate</h4>
+                    <div
+                        class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full mb-4 border border-blue-400">
+                        M.Tech 2025</div>
+                    <p class="text-sm text-gray-700 leading-relaxed font-medium">Machine Learning Engineer @ 73 Strings
+                    </p>
+                </div>
+
+                <!-- Gyanendra Chaubey -->
+                <div
+                    class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 p-6 border-l-4 border-[#0077be] animate-on-scroll bg-gradient-to-r from-gray-50 to-white">
+                    <h4 class="text-xl font-bold text-[#003366] mb-2">Gyanendra Chaubey</h4>
+                    <div
+                        class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full mb-4 border border-blue-400">
+                        M.Tech 2025</div>
+                    <p class="text-sm text-gray-700 leading-relaxed font-medium">AI Reserach Engineer @ Brainwave
+                        science</p>
+                </div>
+
+                <!-- Deepan Mondal -->
+                <div
+                    class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 p-6 border-l-4 border-[#0077be] animate-on-scroll bg-gradient-to-r from-gray-50 to-white">
+                    <h4 class="text-xl font-bold text-[#003366] mb-2">Deepan Mondal</h4>
+                    <div
+                        class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full mb-4 border border-blue-400">
+                        M.Tech 2025</div>
+                    <p class="text-sm text-gray-700 leading-relaxed font-medium">AI System Engineer @ Pradhi AI</p>
+                </div>
+
+                <!-- Harini G -->
+                <div
+                    class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 p-6 border-l-4 border-[#0077be] animate-on-scroll bg-gradient-to-r from-gray-50 to-white">
+                    <h4 class="text-xl font-bold text-[#003366] mb-2">Harini G</h4>
+                    <div
+                        class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full mb-4 border border-blue-400">
+                        M.Tech 2024</div>
+                    <p class="text-sm text-gray-700 leading-relaxed font-medium">Senior Computer Vision Engineer
+                        @FastCode AI</p>
+                    <p class="text-xs text-gray-500 mt-2 italic">Prev. Computer Vision Engineer @ Awiros</p>
+                </div>
+
+                <!-- Satwik Srivastava -->
+                <div
+                    class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 p-6 border-l-4 border-[#0077be] animate-on-scroll bg-gradient-to-r from-gray-50 to-white">
+                    <h4 class="text-xl font-bold text-[#003366] mb-2">Satwik Srivastava</h4>
+                    <div
+                        class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full mb-4 border border-blue-400">
+                        M.Tech 2023</div>
+                    <p class="text-sm text-gray-700 leading-relaxed font-medium">Computer Vision and Deep Learning
+                        Engineer @ MBRDI</p>
+                </div>
+
+                <!-- Anurag Saraswat -->
+                <div
+                    class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 p-6 border-l-4 border-[#0077be] animate-on-scroll bg-gradient-to-r from-gray-50 to-white">
+                    <h4 class="text-xl font-bold text-[#003366] mb-2">Anurag Saraswat</h4>
+                    <div
+                        class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full mb-4 border border-blue-400">
+                        M.Tech 2022</div>
+                    <p class="text-sm text-gray-700 leading-relaxed font-medium">Software Engineer @ Teradata</p>
+                </div>
+
+                <!-- Jaideep Singh Heer -->
+                <div
+                    class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 p-6 border-l-4 border-[#0077be] animate-on-scroll bg-gradient-to-r from-gray-50 to-white">
+                    <h4 class="text-xl font-bold text-[#003366] mb-2">Jaideep Singh Heer</h4>
+                    <div
+                        class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full mb-4 border border-blue-400">
+                        MTech 2022</div>
+                    <p class="text-sm text-gray-700 leading-relaxed font-medium">Sr. Soft. Engineer @ Optum</p>
+                </div>
+
+                <!-- Atanu Guin -->
+                <div
+                    class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 p-6 border-l-4 border-green-600 animate-on-scroll bg-gradient-to-r from-green-50 to-white">
+                    <h4 class="text-xl font-bold text-[#003366] mb-2">Atanu Guin</h4>
+                    <div
+                        class="inline-block bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded-full mb-4 border border-green-400">
+                        Intern 2021</div>
+                    <p class="text-sm text-gray-700 leading-relaxed font-medium">Specialist Data Scientist @ AT&T</p>
+                </div>
+
+                <!-- Vandan Gorade -->
+                <div
+                    class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 p-6 border-l-4 border-green-600 animate-on-scroll bg-gradient-to-r from-green-50 to-white">
+                    <h4 class="text-xl font-bold text-[#003366] mb-2">Vandan Gorade</h4>
+                    <div
+                        class="inline-block bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded-full mb-4 border border-green-400">
+                        Intern 2023</div>
+                    <p class="text-sm text-gray-700 leading-relaxed font-medium">PhD student at Northwestern University
+                    </p>
+                </div>
+
+                <!-- Priyal Khapra -->
+                <div
+                    class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 p-6 border-l-4 border-green-600 animate-on-scroll bg-gradient-to-r from-green-50 to-white">
+                    <h4 class="text-xl font-bold text-[#003366] mb-2">Priyal Khapra</h4>
+                    <div
+                        class="inline-block bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded-full mb-4 border border-green-400">
+                        Intern 2023</div>
+                    <p class="text-sm text-gray-700 leading-relaxed font-medium">MS student at Texas A&M University</p>
+                </div>
+            </div>
+        </div>
+
+
     </div>
+
     <div id="footer-placeholder"></div>
     <script src="js/common.js"></script>
 </body>

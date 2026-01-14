@@ -4,644 +4,561 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research - MAISys Research Group</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Research Papers - MAISys</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .paper-abstract-text {
+            transition: max-height 0.5s ease-out;
+        }
+    </style>
 </head>
 
-<body>
+<body class="bg-[#f9f9f9] text-gray-800 font-sans flex flex-col min-h-screen">
+
     <div id="header-placeholder"></div>
     <div id="nav-placeholder"></div>
-    <div class="container">
-        <!-- Image Carousel -->
-        <!-- <div id="imageCarousel" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#imageCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#imageCarousel" data-slide-to="1"></li>
-                <li data-target="#imageCarousel" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="./images/CT_project.png" class="d-block w-100 hero-image" alt="CT Scan 1">
-                </div>
-                <div class="carousel-item">
-                    <img src="./images/lab_index.jpeg" class="d-block w-100 hero-image" alt="CT Scan 2">
-                </div>
-               
-            </div>
-            <a class="carousel-control-prev" href="#imageCarousel" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#imageCarousel" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-            
-        </div> -->
-        <!-- <h2>Our Research</h2> -->
-        <div class="paper-box">
-            <div class="paper-info">
-                <div class="paper-title">Guide2Heart: Proximity Guidance for Standard Echocardiographic View</div>
-                <div class="paper-authors">Gajendra Singh, Aiman Farooq, Azad Singh, Deepak Mishra, Dr. Rahul Choudhary
-                    and Dr. Pushpinder Singh Khera </div>
-                <div class="paper-publication">ASMUS @ MICCAI, 2025</div>
-                <a href="https://doi.org/10.1007/978-3-032-06329-8_18" class="paper-link" target="_blank">View Paper</a>
-            </div>
-            <div class="paper-content">
-                <div class="paper-image">
-                    <img src="./images/asmus_2025.png" alt="ASMUS MICCAI 2025">
-                </div>
-                <div class="paper-abstract">
-                    <div class="abstract-content">
-                        We introduce Guide2Heart, a unique dataset comprising labelled ultrasound images for
-                        echocardiographic guidance. It targets the Parasternal Long-Axis (PLAX) view, a clinically key
-                        cardiac imaging plane. The labelled data consists of four categories—Standard PLAX, Almost PLAX,
-                        Nearby PLAX, and Away from PLAX. Our dataset facilitates the development of real-time
-                        view-proximity-based guidance systems that assist echocardiographers in efficiently acquiring
-                        the standard PLAX view. Specifically, Guide2Heart includes 3322 ultrasound images from 67
-                        studies conducted on 23 subjects. To validate the effectiveness of our dataset, we conduct
-                        multiple experiments using various CNN models and a ViT network, reporting K-fold
-                        cross-validation results. Our experimental findings highlight the potential for automated
-                        guidance in acquiring standard echocardiographic views, ultimately improving the efficiency and
-                        standardization of echocardiographic examinations.
+
+    <div class="flex-grow w-full max-w-6xl mx-auto px-4 py-8">
+        <h2 class="text-3xl font-bold text-[#003366] text-center mb-10 border-b-4 border-[#ffd700] pb-2 inline-block mx-auto">
+            Published Papers
+        </h2>
+
+        <div class="space-y-8">
+
+            <!-- Paper 1 -->
+            <div class="bg-white rounded-lg shadow-md p-6 border border-gray-200 hover:shadow-lg transition-shadow duration-300 animate-on-scroll">
+                <div class="mb-4">
+                    <h3 class="text-xl md:text-2xl font-bold text-[#003366] mb-2">Guide2Heart: Proximity Guidance for Standard Echocardiographic View</h3>
+                    <div class="text-gray-700 italic mb-1">Gajendra Singh, Aiman Farooq, Azad Singh, Deepak Mishra, Dr. Rahul Choudhary and Dr. Pushpinder Singh Khera</div>
+                    <div class="flex flex-wrap items-center justify-between mt-3 gap-2">
+                        <span class="bg-blue-100 text-[#003366] px-3 py-1 rounded-full text-sm font-semibold">ASMUS @ MICCAI, 2025</span>
+                        <a href="https://doi.org/10.1007/978-3-032-06329-8_18" target="_blank"
+                            class="text-white bg-[#0077be] hover:bg-[#003366] px-4 py-2 rounded-md text-sm font-bold transition-colors">
+                            <i class="fas fa-file-pdf mr-1"></i> View Paper
+                        </a>
                     </div>
-                    <span class="read-more" onclick="toggleAbstract(this)">Read More</span>
                 </div>
-            </div>
-        </div>
-        <div class="paper-box">
-            <div class="paper-info">
-                <div class="paper-title">Fine-Grained Rib Fracture Diagnosis with Hyperbolic Embeddings: A Detailed
-                    Annotation Framework and Multi-label Classification Model</div>
-                <div class="paper-authors">Shripad Pate*,Aiman Farooq*,and Deepak Mishra</div>
-                <div class="paper-publication">MICCAI, 2025</div>
-                <a href="https://link.springer.com/chapter/10.1007/978-3-032-05182-0_22" class="paper-link"
-                    target="_blank">View Paper</a>
-            </div>
-            <div class="paper-content">
-                <div class="paper-image">
-                    <img src="./images/model8.drawio.png" alt="MICCAIArch">
-                </div>
-                <div class="paper-abstract">
-                    <div class="abstract-content">
-                        ccurate rib fracture identification and classification are es-
-                        sential for treatment planning. However, existing datasets often lack fine-
-                        grained annotations, particularly regarding rib fracture characterization,
-                        type, and precise anatomical location on individual ribs. To address this,
-                        we introduce a novel rib fracture annotation protocol tailored for fracture
-                        classification. Further, we enhance fracture classification by leveraging
-                        cross-modal embeddings that bridge radiological images and clinical de-
-                        scriptions. Our approach employs hyperbolic embeddings to capture the
-                        hierarchical nature of fracture, mapping visual features and textual de-
-                        scriptions into a shared non-Euclidean manifold. This framework enables
-                        more nuanced similarity computations between imaging characteristics
-                        and clinical descriptions, accounting for the inherent hierarchical rela-
-                        tionships in fracture taxonomy. Experimental results demonstrate that
-                        our approach outperforms existing methods across multiple classification
-                        tasks, with average recall improvements of 6% on the AirRib dataset and
-                        17.5% on the public RibFrac dataset. The code and annotation files can
-                        be accessed at https://github.com/ribfracture123/classification
+                <div class="flex flex-col md:flex-row gap-6 border-t border-gray-100 pt-4">
+                    <div class="w-full md:w-1/3 lg:w-1/4 shrink-0 flex items-start justify-center bg-gray-50 p-2 rounded skeleton-bg animate-pulse">
+                        <img src="./images/asmus_2025.png" class="max-w-full h-auto max-h-64 object-contain rounded shadow-sm opacity-0"
+                            alt="ASMUS MICCAI 2025" onload="handleImageLoad(this)">
                     </div>
-                    <span class="read-more" onclick="toggleAbstract(this)">Read More</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="paper-box">
-            <div class="paper-info">
-                <div class="paper-title">Uncertainty-Aware Cross-Modal Attention for
-                    Breast Cancer Classification in Ultrasound
-                    Imaging
-                </div>
-                <div class="paper-authors">Aiman Farooq*,Chandisha Das*, and Deepak Mishra</div>
-                <div class="paper-publication">DeepBreath@MICCAI, 2025</div>
-                <a href="https://link.springer.com/chapter/10.1007/978-3-032-05559-0_22" class="paper-link"
-                    target="_blank">View Paper</a>
-            </div>
-            <div class="paper-content">
-                <div class="paper-image">
-                    <img src="./images/tt.png" alt="DeepArch">
-                </div>
-                <div class="paper-abstract">
-                    <div class="abstract-content">
-                        We propose an uncertainty-aware cross-modal attention frame-
-                        work for breast cancer classification using ultrasound imaging and struc-
-                        tured clinical data. Our model incorporates a Clinical Knowledge Gate
-                        (CKG) that adaptively weights clinical features based on medical domain
-                        relevance, and an uncertainty-aware attention mechanism that dynam-
-                        ically fuses modalities based on confidence estimates. We employ con-
-                        trastive learning to enhance alignment between modalities and address
-                        class imbalance through an adaptive focal loss with uncertainty regu-
-                        larization. Evaluated on the Breast-Lesions-USG dataset, our method
-                        outperforms traditional and deep learning baselines, achieving 90% ac-
-                        curacy and 98% recall. Grad-CAM visualizations confirm alignment with
-                        radiological markers, while uncertainty estimates improve interpretabil-
-                        ity and clinical trust.
+                    <div class="flex-1">
+                        <h4 class="font-bold text-gray-500 mb-2 text-xs uppercase tracking-wider">Abstract</h4>
+                        <div class="text-gray-600 text-sm leading-relaxed">
+                            <div class="paper-abstract-text max-h-24 overflow-hidden relative">
+                                We introduce Guide2Heart, a unique dataset comprising labelled ultrasound images for echocardiographic guidance. It targets the Parasternal Long-Axis (PLAX) view, a clinically key cardiac imaging plane. The labelled data consists of four categories—Standard PLAX, Almost PLAX, Nearby PLAX, and Away from PLAX. Our dataset facilitates the development of real-time view-proximity-based guidance systems that assist echocardiographers in efficiently acquiring the standard PLAX view. Specifically, Guide2Heart includes 3322 ultrasound images from 67 studies conducted on 23 subjects. To validate the effectiveness of our dataset, we conduct multiple experiments using various CNN models and a ViT network, reporting K-fold cross-validation results. Our experimental findings highlight the potential for automated guidance in acquiring standard echocardiographic views, ultimately improving the efficiency and standardization of echocardiographic examinations.
+                            </div>
+                            <button onclick="toggleAbstract(this)" class="mt-2 text-[#0077be] hover:text-[#003366] text-sm font-bold focus:outline-none flex items-center gap-1">
+                                <span>Read More</span> <i class="fas fa-chevron-down text-xs"></i>
+                            </button>
+                        </div>
                     </div>
-                    <span class="read-more" onclick="toggleAbstract(this)">Read More</span>
                 </div>
             </div>
-        </div>
 
-        <div class="paper-box">
-            <div class="paper-info">
-                <div class="paper-title">Survival Prediction in Lung Cancer through Multi-Modal Representation Learning
-                </div>
-                <div class="paper-authors">Aiman Farooq,Deepak Mishra and Santanu Chaudhury</div>
-                <div class="paper-publication">WACV, 2025</div>
-                <a href="https://arxiv.org/abs/2409.20179" class="paper-link" target="_blank">View Paper</a>
-            </div>
-            <div class="paper-content">
-                <div class="paper-image">
-                    <img src="./images/final15.drawio.png" alt="WACVArch">
-                </div>
-                <div class="paper-abstract">
-                    <div class="abstract-content">
-                        Survival prediction is a crucial task associated with can-
-                        cer diagnosis and treatment planning. This paper presents
-                        a novel approach to survival prediction by harnessing com-
-                        prehensive information from CT and PET scans, along with
-                        associated Genomic data. Current methods rely on either
-                        a single modality or the integration of multiple modalities
-                        for prediction without adequately addressing associations
-                        across patients or modalities. We aim to develop a ro-
-                        bust predictive model for survival outcomes by integrating
-                        multi-modal imaging data with genetic information while
-                        accounting for associations across patients and modali-
-                        ties. We learn representations for each modality via a self-
-                        supervised module and harness the semantic similarities
-                        across the patients to ensure the embeddings are aligned
-                        closely. However, optimizing solely for global relevance
-                        is inadequate, as many pairs sharing similar high-level
-                        semantics, such as tumor type, are inadvertently pushed
-                        apart in the embedding space. To address this issue, we
-                        use a cross-patient module (CPM) designed to harness
-                        inter-subject correspondences. The CPM module aims to
-                        bring together embeddings from patients with similar dis-
-                        ease characteristics. Our experimental evaluation of the
-                        dataset of Non-Small Cell Lung Cancer (NSCLC) patients
-                        demonstrates the effectiveness of our approach in predicting
-                        survival outcomes, outperforming state-of-the-art methods
+            <!-- Paper 2 -->
+            <div class="bg-white rounded-lg shadow-md p-6 border border-gray-200 hover:shadow-lg transition-shadow duration-300 animate-on-scroll">
+                <div class="mb-4">
+                    <h3 class="text-xl md:text-2xl font-bold text-[#003366] mb-2">Fine-Grained Rib Fracture Diagnosis with Hyperbolic Embeddings: A Detailed Annotation Framework and Multi-label Classification Model</h3>
+                    <div class="text-gray-700 italic mb-1">Shripad Pate*, Aiman Farooq*, and Deepak Mishra</div>
+                    <div class="flex flex-wrap items-center justify-between mt-3 gap-2">
+                        <span class="bg-blue-100 text-[#003366] px-3 py-1 rounded-full text-sm font-semibold">MICCAI, 2025</span>
+                        <a href="https://link.springer.com/chapter/10.1007/978-3-032-05182-0_22" target="_blank"
+                            class="text-white bg-[#0077be] hover:bg-[#003366] px-4 py-2 rounded-md text-sm font-bold transition-colors">
+                            <i class="fas fa-file-pdf mr-1"></i> View Paper
+                        </a>
                     </div>
-                    <span class="read-more" onclick="toggleAbstract(this)">Read More</span>
                 </div>
-            </div>
-        </div>
-
-
-        <div class="paper-box">
-            <div class="paper-info">
-                <div class="paper-title">Leveraging Auxiliary Classification for Rib FractureSegmentation</div>
-                <div class="paper-authors">Harini G*.Aiman Farooq*,and Deepak Mishra </div>
-                <div class="paper-publication">ICVGIP, 2024</div>
-                <a href="https://ui.adsabs.harvard.edu/abs/2024arXiv241109283H/abstract" class="paper-link"
-                    target="_blank">View Paper</a>
-            </div>
-            <div class="paper-content">
-                <div class="paper-image">
-                    <img src="./images/net.png" alt="ICVGIPArch">
-                </div>
-                <div class="paper-abstract">
-                    <div class="abstract-content">
-                        Thoracic trauma often results in rib fractures, which demand swift
-                        and accurate diagnosis for effective treatment. However, detect-
-                        ing these fractures on rib CT scans poses considerable challenges,
-                        involving the analysis of many image slices in sequence. Despite
-                        notable advancements in algorithms for automated fracture seg-
-                        mentation, the persisting challenges stem from the diverse shapes
-                        and sizes of these fractures. To address these issues, this study
-                        introduces a sophisticated deep-learning model with an auxiliary
-                        classification task designed to enhance the accuracy of rib frac-
-                        ture segmentation. The auxiliary classification task is crucial in
-                        distinguishing between fractured ribs and negative regions, en-
-                        compassing non-fractured ribs and surrounding tissues, from the
-                        patches obtained from CT scans. By leveraging this auxiliary task,
-                        the model aims to improve feature representation at the bottleneck
-                        layer by highlighting the regions of interest. Experimental results
-                        on the RibFrac dataset demonstrate significant improvement in
-                        segmentation performance
+                <div class="flex flex-col md:flex-row gap-6 border-t border-gray-100 pt-4">
+                    <div class="w-full md:w-1/3 lg:w-1/4 shrink-0 flex items-start justify-center bg-gray-50 p-2 rounded skeleton-bg animate-pulse">
+                        <img src="./images/model8.drawio.png" class="max-w-full h-auto max-h-64 object-contain rounded shadow-sm opacity-0"
+                            alt="MICCAIArch" onload="handleImageLoad(this)">
                     </div>
-                    <span class="read-more" onclick="toggleAbstract(this)">Read More</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="paper-box">
-            <div class="paper-info">
-                <div class="paper-title">Enhanced Survival Prediction in Head and Neck Cancer</div>
-                <div class="paper-authors">Aiman Farooq, Utkarsh Sharma, and Deepak Mishra </div>
-                <div class="paper-publication">ACCVW, 2024</div>
-                <a href="https://openaccess.thecvf.com/content/ACCV2024W/WiCV/papers/Farooq_Enhanced_Survival_Prediction_in_Head_and_Neck_Cancer_Using_Convolutional_ACCVW_2024_paper.pdf"
-                    class="paper-link" target="_blank">View Paper</a>
-            </div>
-            <div class="paper-content">
-                <div class="paper-image">
-                    <img src="./images/final3.png" alt="ACCVArch">
-                </div>
-                <div class="paper-abstract">
-                    <div class="abstract-content">
-                        Accurate survival prediction in head and neck cancer (HNC) is essential for guiding clinical
-                        decision-making and optimizing treatment strategies. Traditional models, such as Cox
-                        proportional hazards, have been widely used but are limited in their ability to handle complex
-                        multimodal data. This paper proposes a deep learning-based approach leveraging CT and PET
-                        imaging modalities to predict survival outcomes in HNC patients. Our method integrates feature
-                        extraction with a Convolutional Block Attention Module (CBAM) and a multi-modal data fusion
-                        layer that combines imaging data to generate a compact feature representation. The final
-                        prediction is achieved through a fully parametric discrete-time survival model, allowing for
-                        flexible hazard functions that overcome the limitations of traditional survival models. We
-                        evaluated our approach using the HECKTOR and HEAD-NECK-RADIOMICSHN1 datasets, demonstrating its
-                        superior performance compared to conventional statistical and machine learning models. The
-                        results indicate that our deep learning model significantly improves survival prediction
-                        accuracy, offering a robust tool for personalized treatment planning in HNC.
+                    <div class="flex-1">
+                        <h4 class="font-bold text-gray-500 mb-2 text-xs uppercase tracking-wider">Abstract</h4>
+                        <div class="text-gray-600 text-sm leading-relaxed">
+                            <div class="paper-abstract-text max-h-24 overflow-hidden relative">
+                                Accurate rib fracture identification and classification are essential for treatment planning. However, existing datasets often lack fine-grained annotations, particularly regarding rib fracture characterization, type, and precise anatomical location on individual ribs. To address this, we introduce a novel rib fracture annotation protocol tailored for fracture classification. Further, we enhance fracture classification by leveraging cross-modal embeddings that bridge radiological images and clinical descriptions. Our approach employs hyperbolic embeddings to capture the hierarchical nature of fracture, mapping visual features and textual descriptions into a shared non-Euclidean manifold. This framework enables more nuanced similarity computations between imaging characteristics and clinical descriptions, accounting for the inherent hierarchical relationships in fracture taxonomy. Experimental results demonstrate that our approach outperforms existing methods across multiple classification tasks, with average recall improvements of 6% on the AirRib dataset and 17.5% on the public RibFrac dataset. The code and annotation files can be accessed at https://github.com/ribfracture123/classification
+                            </div>
+                            <button onclick="toggleAbstract(this)" class="mt-2 text-[#0077be] hover:text-[#003366] text-sm font-bold focus:outline-none flex items-center gap-1">
+                                <span>Read More</span> <i class="fas fa-chevron-down text-xs"></i>
+                            </button>
+                        </div>
                     </div>
-                    <span class="read-more" onclick="toggleAbstract(this)">Read More</span>
                 </div>
             </div>
-        </div>
 
-
-        <div class="paper-box">
-            <div class="paper-info">
-                <div class="paper-title">MLVICX: Multi-Level Variance-Covariance Exploration for Chest X-ray
-                    Self-Supervised Representation Learning</div>
-                <div class="paper-authors">Azad Singh, Vandan Gorade, and Deepak Mishra</div>
-                <div class="paper-publication">IEEE Journal of Biomedical and Health Informatics, 2024</div>
-                <a href="https://ieeexplore.ieee.org/document/10666966" class="paper-link" target="_blank">View
-                    Paper</a>
-            </div>
-            <div class="paper-content">
-                <div class="paper-image">
-                    <img src="./images/mlvicx.png" alt="MLVICX Architecture">
-                </div>
-                <div class="paper-abstract">
-                    <div class="abstract-content">
-                        Self-supervised learning (SSL) is potentially useful in reducing the need for manual annotation
-                        and making deep learning models accessible for medical image analysis tasks.
-                        By leveraging the representations learned from unlabeled data, self-supervised models perform
-                        well on tasks that require little to no fine-tuning. However, for medical images,
-                        like chest X-rays, characterized by complex anatomical structures and diverse clinical
-                        conditions, a need arises for representation learning techniques that encode fine-grained
-                        details while preserving the broader contextual information. In this context, we introduce
-                        MLVICX (Multi-Level Variance-Covariance Exploration for Chest X-ray Self-Supervised
-                        Representation Learning),
-                        an approach to capture rich representations in the form of embeddings from chest X-ray images.
-                        Central to our approach is a novel multi-level variance and covariance exploration strategy that
-                        effectively
-                        enables the model to detect diagnostically meaningful patterns while reducing redundancy. MLVICX
-                        promotes the retention of critical medical insights by adapting global and local contextual
-                        details and
-                        enhancing the variance and covariance of the learned embeddings. We demonstrate the performance
-                        of MLVICX in advancing self-supervised chest X-ray representation learning through comprehensive
-                        experiments.
-                        The performance enhancements we observe across various downstream tasks highlight the
-                        significance of the proposed approach in enhancing the utility of chest X-ray embeddings for
-                        precision medical diagnosis
-                        and comprehensive image analysis. For pertaining, we used the NIH-Chest X-ray dataset, while for
-                        downstream tasks, we utilized NIH-Chest X-ray, Vinbig-CXR, RSNA pneumonia, and SIIM-ACR
-                        Pneumothorax datasets.
-                        Overall, we observe up to 3% performance gain over SOTA SSL approaches in various downstream
-                        tasks. Additionally, to demonstrate the generalizability of the proposed method, we conducted
-                        additional experiments
-                        on fundus images and observed superior performance on multiple datasets.
+            <!-- Paper 3 -->
+            <div class="bg-white rounded-lg shadow-md p-6 border border-gray-200 hover:shadow-lg transition-shadow duration-300 animate-on-scroll">
+                <div class="mb-4">
+                    <h3 class="text-xl md:text-2xl font-bold text-[#003366] mb-2">Uncertainty-Aware Cross-Modal Attention for Breast Cancer Classification in Ultrasound Imaging</h3>
+                    <div class="text-gray-700 italic mb-1">Aiman Farooq*, Chandisha Das*, and Deepak Mishra</div>
+                    <div class="flex flex-wrap items-center justify-between mt-3 gap-2">
+                        <span class="bg-blue-100 text-[#003366] px-3 py-1 rounded-full text-sm font-semibold">DeepBreath @ MICCAI, 2025</span>
+                        <a href="https://link.springer.com/chapter/10.1007/978-3-032-05559-0_22" target="_blank"
+                            class="text-white bg-[#0077be] hover:bg-[#003366] px-4 py-2 rounded-md text-sm font-bold transition-colors">
+                            <i class="fas fa-file-pdf mr-1"></i> View Paper
+                        </a>
                     </div>
-                    <span class="read-more" onclick="toggleAbstract(this)">Read More</span>
                 </div>
-            </div>
-        </div>
-
-        <div class="paper-box">
-            <div class="paper-info">
-                <div class="paper-title">CoBooM: Codebook Guided Bootstrapping for Medical Image Representation Learning
-                </div>
-                <div class="paper-authors">Azad Singh and Deepak Mishra</div>
-                <div class="paper-publication">MICCAI, 2024</div>
-                <a href="https://arxiv.org/abs/2408.04262" class="paper-link" target="_blank">View Paper</a>
-            </div>
-            <div class="paper-content">
-                <div class="paper-image">
-                    <img src="./images/cobom.png" alt="CoBooM Architecture">
-                </div>
-                <div class="paper-abstract">
-                    <div class="abstract-content">
-                        Self-supervised learning (SSL) has emerged as a promising paradigm for medical image analysis by
-                        harnessing unannotated data. Despite their potential, the existing SSL approaches overlook the
-                        high anatomical similarity inherent in medical images. This makes it challenging for SSL
-                        methods to capture diverse semantic content in medical images consistently. This work introduces
-                        a novel and generalized solution that implicitly exploits anatomical similarities by integrating
-                        codebooks in SSL. The codebook serves as a concise and informative dictionary of visual
-                        patterns, which not only aids in capturing nuanced anatomical details but also facilitates the
-                        creation of robust and generalized feature representations. In this context, we propose CoBooM,
-                        a novel framework for self-supervised medical image learning by integrating continuous
-                        and discrete representations. The continuous component ensures the preservation of fine-grained
-                        details, while the discrete aspect facilitates coarse-grained feature extraction through the
-                        structured embedding space. To understand the effectiveness of CoBooM, we conduct a
-                        comprehensive
-                        evaluation of various medical datasets encompassing chest X-rays and fundus images. The
-                        experimental results reveal a significant performance gain in classification and segmentation
-                        tasks.
+                <div class="flex flex-col md:flex-row gap-6 border-t border-gray-100 pt-4">
+                    <div class="w-full md:w-1/3 lg:w-1/4 shrink-0 flex items-start justify-center bg-gray-50 p-2 rounded skeleton-bg animate-pulse">
+                        <img src="./images/tt.png" class="max-w-full h-auto max-h-64 object-contain rounded shadow-sm opacity-0"
+                            alt="DeepArch" onload="handleImageLoad(this)">
                     </div>
-                    <span class="read-more" onclick="toggleAbstract(this)">Read More</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="paper-box">
-            <div class="paper-info">
-                <div class="paper-title">IDQCE: Instance Discrimination Learning through Quantized Contextual Embeddings
-                    for Medical Images</div>
-                <div class="paper-authors">Azad Singh and Deepak Mishra</div>
-                <div class="paper-publication">ICPR, 2024</div>
-                <a href="#" class="paper-link" target="_blank">View Paper</a>
-            </div>
-            <div class="paper-content">
-                <div class="paper-image">
-                    <img src="./images/IPID.png" alt="IDQCE Architecture">
-                </div>
-                <div class="paper-abstract">
-                    <div class="abstract-content">
-                        Self-supervised pre-training is effective in learning discrim-
-                        inative features from unlabeled medical images. However, typical self-
-                        supervised models lead to sub-optimal representations due to negligence
-                        of high anatomical similarity present in the medical images. This af-
-                        fects the negative and positive pairs in discriminative self-supervised
-                        models to learn view-invariant representations. Various methods are pro-
-                        posed to address this issue. However, many of them either concentrate
-                        on preserving pixel-level details or offer solutions for specific modali-
-                        ties. In this context, we propose a generalized solution to leverage the
-                        anatomical similarities while relaxing the requirements of complex pixel-
-                        preservation learning. Specifically, we introduce IDQCE: Instance Dis-
-                        crimination Learning through Quantized Contextual Embeddings. The
-                        proposed approach leverages the sparse discrete contextual information
-                        to guide the self-supervised framework to learn more informative repre-
-                        sentations for medical images. We evaluate the representations learned
-                        by IDQCE through comprehensive experiments and observe more than
-                        3% performance gain under linear evaluation protocol over other SOTA
-                        approaches in multiple downstream tasks.
+                    <div class="flex-1">
+                        <h4 class="font-bold text-gray-500 mb-2 text-xs uppercase tracking-wider">Abstract</h4>
+                        <div class="text-gray-600 text-sm leading-relaxed">
+                            <div class="paper-abstract-text max-h-24 overflow-hidden relative">
+                                We propose an uncertainty-aware cross-modal attention framework for breast cancer classification using ultrasound imaging and structured clinical data. Our model incorporates a Clinical Knowledge Gate (CKG) that adaptively weights clinical features based on medical domain relevance, and an uncertainty-aware attention mechanism that dynamically fuses modalities based on confidence estimates. We employ contrastive learning to enhance alignment between modalities and address class imbalance through an adaptive focal loss with uncertainty regularization. Evaluated on the Breast-Lesions-USG dataset, our method outperforms traditional and deep learning baselines, achieving 90% accuracy and 98% recall. Grad-CAM visualizations confirm alignment with radiological markers, while uncertainty estimates improve interpretability and clinical trust.
+                            </div>
+                            <button onclick="toggleAbstract(this)" class="mt-2 text-[#0077be] hover:text-[#003366] text-sm font-bold focus:outline-none flex items-center gap-1">
+                                <span>Read More</span> <i class="fas fa-chevron-down text-xs"></i>
+                            </button>
+                        </div>
                     </div>
-                    <span class="read-more" onclick="toggleAbstract(this)">Read More</span>
                 </div>
             </div>
-        </div>
-        <div class="paper-box">
-            <div class="paper-info">
-                <div class="paper-title">Towards Soft-robotic Assistance of Ultrasonic Imaging</div>
-                <div class="paper-authors">Gajendra Singh, Manish Chauhan, Deepak Mishra, Rahul Choudhary, Pushpinder
-                    Singh Khera</div>
-                <div class="paper-publication">2024 IEEE South Asian Ultrasonics Symposium (SAUS)</div>
-                <a href="https://doi.org/10.1109/SAUS61785.2024.10563911" class="paper-link" target="_blank">View
-                    Paper</a>
-            </div>
-            <div class="paper-content">
-                <div class="paper-image">
-                    <img src="./images/IEEE_SAUS_2024.gif" alt="IEEE SAUS 2024">
-                </div>
-                <div class="paper-abstract">
-                    <div class="abstract-content">
-                        Sonography plays a critical role in diagnosing various health conditions, but operator-dependent
-                        limitations impact imaging quality and consistency.
-                        Robotic scanning has emerged as a solution to enhance imaging consistency while reducing
-                        operator dependency.
-                        This paper presents a compliant soft robotic gripper designed to assist in sonography procedures
-                        using hyperelastic materials.
-                        The gripper design features four channels with five inflatable strips per channel constructed
-                        with Polydimethylsiloxane (PDMS), allowing for spatial bending when pressurized.
-                        Fabrication involves CAD modelling, 3D printing, and silicon casting method-based curing and
-                        finally sealed with fabric and silicon.
-                        Experimental results demonstrate the gripper’s capability, with a single channel achieving a
-                        deflection of approximately 57 degrees.
-                        Further optimization of channel length, number of channels, and number of strip configurations
-                        and their design is required through analytical or simulation work.
-                        The study showcases the feasibility of integrating soft robotics into medical imaging,
-                        potentially revolutionizing sonography practices and patient care.
+
+            <!-- Paper 4 -->
+            <div class="bg-white rounded-lg shadow-md p-6 border border-gray-200 hover:shadow-lg transition-shadow duration-300 animate-on-scroll">
+                <div class="mb-4">
+                    <h3 class="text-xl md:text-2xl font-bold text-[#003366] mb-2">Survival Prediction in Lung Cancer through Multi-Modal Representation Learning</h3>
+                    <div class="text-gray-700 italic mb-1">Aiman Farooq, Deepak Mishra and Santanu Chaudhury</div>
+                    <div class="flex flex-wrap items-center justify-between mt-3 gap-2">
+                        <span class="bg-blue-100 text-[#003366] px-3 py-1 rounded-full text-sm font-semibold">WACV, 2025</span>
+                        <a href="https://arxiv.org/abs/2409.20179" target="_blank"
+                            class="text-white bg-[#0077be] hover:bg-[#003366] px-4 py-2 rounded-md text-sm font-bold transition-colors">
+                            <i class="fas fa-file-pdf mr-1"></i> View Paper
+                        </a>
                     </div>
-                    <span class="read-more" onclick="toggleAbstract(this)">Read More</span>
                 </div>
-            </div>
-        </div>
-        <div class="paper-box">
-            <div class="paper-info">
-                <div class="paper-title">Translating Imaging to Genomics: Leveraging Transformers for Predictive
-                    Modeling</div>
-                <div class="paper-authors">Aiman Farooq, Deepak Mishra and Santanu Chaudhury</div>
-                <div class="paper-publication">CVPR Workshop : WiCV, 2024</div>
-                <a href="https://arxiv.org/abs/2408.00311#" class="paper-link"
-                    target="https://arxiv.org/abs/2408.00311#">View Paper</a>
-            </div>
-            <div class="paper-content">
-                <div class="paper-image">
-                    <img src="./images/wicv.png" alt="WiCVArchitecture">
-                </div>
-                <div class="paper-abstract">
-                    <div class="abstract-content">
-                        In this study, we present a novel approach for predicting genomic information from medical
-                        imaging modalities using a transformer-based model.
-                        We aim to bridge the gap between imaging and genomics data by leveraging transformer networks,
-                        allowing for accurate genomic profile
-                        predictions from CT/MRI images. Presently most studies rely on the use of whole slide images
-                        (WSI) for the association, which are obtained
-                        via invasive methodologies. We propose using only available CT/MRI images to predict genomic
-                        sequences.
-                        Our transformer based approach is able to efficiently generate associations between multiple
-                        sequences based on CT/MRI images alone.
-                        This work paves the way for the use of non-invasive imaging modalities for precise and
-                        personalized healthcare,
-                        allowing for a better understanding of diseases and treatment. </div>
-                    <span class="read-more" onclick="toggleAbstract(this)">Read More</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="paper-box">
-            <div class="paper-info">
-                <div class="paper-title">Large Scale Time-Series Representation Learning via Simultaneous Low- and
-                    High-Frequency Feature Bootstrapping</div>
-                <div class="paper-authors">Vandan Gorade*, Azad Singh* and Deepak Mishra (* Equal Contribution) </div>
-                <div class="paper-publication">IEEE, Transactions on Neural Networks and Learning Systems 2023</div>
-                <a href="https://ieeexplore.ieee.org/document/10329573" class="paper-link" target="_blank">View
-                    Paper</a>
-            </div>
-            <div class="paper-content">
-                <div class="paper-image">
-                    <img src="./images/tnnls.png" alt="tnnls Architecture">
-                </div>
-                <div class="paper-abstract">
-                    <div class="abstract-content">
-                        Learning representations from unlabeled time series data is a challenging problem. Most existing
-                        self-supervised
-                        and unsupervised approaches in the time-series domain fall short in capturing low- and
-                        high-frequency features at the same time. As a result, the generalization ability of the learned
-                        representations remains limited. Furthermore, some of these methods employ large-scale models
-                        like transformers or rely
-                        on computationally expensive techniques such as contrastive learning. To tackle these problems,
-                        we propose a non-contrastive
-                        self-supervised learning approach that efficiently captures low-and high-frequency features in a
-                        cost-effective manner. The
-                        proposed framework comprises a siamese configuration of a deep neural network with two
-                        weight-sharing branches which are
-                        followed by low- and high-frequency feature extraction modules. The two branches of the proposed
-                        network allow bootstrapping of the latent representation by taking two different augmented
-                        views of raw time series data as input. The augmented views are created by applying random
-                        transformations sampled from
-                        a single set of augmentations. The low- and high-frequency feature extraction modules of the
-                        proposed network contain
-                        a combination of multilayer perceptron (MLP) and temporal convolutional network (TCN) heads
-                        respectively, which capture
-                        the temporal dependencies from the raw input data at various scales due to the varying receptive
-                        fields. To demonstrate the
-                        robustness of our model, we performed extensive experiments and ablation studies on five
-                        real-world time-series datasets. Our
-                        method achieves state-of-art performance on all the considered datasets.
+                <div class="flex flex-col md:flex-row gap-6 border-t border-gray-100 pt-4">
+                    <div class="w-full md:w-1/3 lg:w-1/4 shrink-0 flex items-start justify-center bg-gray-50 p-2 rounded skeleton-bg animate-pulse">
+                        <img src="./images/final15.drawio.png" class="max-w-full h-auto max-h-64 object-contain rounded shadow-sm opacity-0"
+                            alt="WACVArch" onload="handleImageLoad(this)">
                     </div>
-                    <span class="read-more" onclick="toggleAbstract(this)">Read More</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="paper-box">
-            <div class="paper-info">
-                <div class="paper-title">BAFL: Federated Learning with Base Ablation for Cost Effective Communication
-                </div>
-                <div class="paper-authors">Mayank Kumar, Anurag Saraswat, Ishan Mishra and Deepak Mishra </div>
-                <div class="paper-publication">ICPR 2022</div>
-                <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9956684" class="paper-link"
-                    target="_blank">View Paper</a>
-            </div>
-            <div class="paper-content">
-                <div class="paper-image">
-                    <img src="./images/new1.png" alt="mtbyol Architecture">
-                </div>
-                <div class="paper-abstract">
-                    <div class="abstract-content">
-                        Federated learning is a distributed machine learning setting in which clients train a global
-                        model on their local
-                        data and share their knowledge with the server in form of the trained model while maintaining
-                        privacy of the data.
-                        The server aggregates clients' knowledge to create a generalized global model. Two major
-                        challenges faced in this
-                        process are data heterogeneity and high communication cost. We target the latter and propose a
-                        simple approach,
-                        BAFL (Federated Learning for Base Ablation) for cost effective communication in federated
-                        learning. In contrast
-                        to the common practice of employing model compression techniques to reduce the total
-                        communication cost, we propose
-                        a fine-tuning approach to leverage the feature extraction ability of layers at different depths
-                        of deep neural
-                        networks. We use a model pretrained on general-purpose large scale data as a global model. This
-                        helps in better
-                        weight initialization and reduces the total communication cost required for obtaining the
-                        generalized model. We
-                        achieve further cost reduction by focusing only on the layers responsible for semantic features
-                        (data specific
-                        information). The clients fine tune only top layers on their local data. Base layers are ablated
-                        while transferring
-                        the model and clients communicate parameters corresponding to the remaining layers. This results
-                        in reduction of
-                        communication cost per round without compromising the accuracy. We evaluate the proposed
-                        approach using VGG-16 and
-                        ResNet-50 models on datasets including WBC, FOOD-101, and CIFAR-10 and obtain up to two orders
-                        of reduction in
-                        total communication cost as compared to the conventional federated learning. We perform
-                        experiments in both IID and
-                        Non-IID settings and observe consistent improvements.
+                    <div class="flex-1">
+                        <h4 class="font-bold text-gray-500 mb-2 text-xs uppercase tracking-wider">Abstract</h4>
+                        <div class="text-gray-600 text-sm leading-relaxed">
+                            <div class="paper-abstract-text max-h-24 overflow-hidden relative">
+                                Survival prediction is a crucial task associated with cancer diagnosis and treatment planning. This paper presents a novel approach to survival prediction by harnessing comprehensive information from CT and PET scans, along with associated Genomic data. Current methods rely on either a single modality or the integration of multiple modalities for prediction without adequately addressing associations across patients or modalities. We aim to develop a robust predictive model for survival outcomes by integrating multi-modal imaging data with genetic information while accounting for associations across patients and modalities. We learn representations for each modality via a self-supervised module and harness the semantic similarities across the patients to ensure the embeddings are aligned closely. However, optimizing solely for global relevance is inadequate, as many pairs sharing similar high-level semantics, such as tumor type, are inadvertently pushed apart in the embedding space. To address this issue, we use a cross-patient module (CPM) designed to harness inter-subject correspondences. The CPM module aims to bring together embeddings from patients with similar disease characteristics. Our experimental evaluation of the dataset of Non-Small Cell Lung Cancer (NSCLC) patients demonstrates the effectiveness of our approach in predicting survival outcomes, outperforming state-of-the-art methods.
+                            </div>
+                            <button onclick="toggleAbstract(this)" class="mt-2 text-[#0077be] hover:text-[#003366] text-sm font-bold focus:outline-none flex items-center gap-1">
+                                <span>Read More</span> <i class="fas fa-chevron-down text-xs"></i>
+                            </button>
+                        </div>
                     </div>
-                    <span class="read-more" onclick="toggleAbstract(this)">Read More</span>
                 </div>
             </div>
-        </div>
 
-        <div class="paper-box">
-            <div class="paper-info">
-                <div class="paper-title">Branching Out for Better BYOL</div>
-                <div class="paper-authors">Azad Singh and Deepak Mishra </div>
-                <div class="paper-publication">NeurIPS'21 SSL Workshop 2021</div>
-                <a href="https://sslneurips21.github.io/files/CameraReady/Multi_Target_BYOL%20.pdf" class="paper-link"
-                    target="_blank">View Paper</a>
-            </div>
-            <div class="paper-content">
-                <div class="paper-image">
-                    <img src="./images/mtbyol.png" alt="mtbyol Architecture">
-                </div>
-                <div class="paper-abstract">
-                    <div class="abstract-content">
-                        BYOL leads migration of self-supervised learning techniques from contrastive
-                        to non-constative paradigm. Non-constative techniques do not require negative
-                        pairs to learn meaningful representations from the data. Their success mainly
-                        depends on the stochastic composition of data augmentation techniques and the
-                        siamese configuration of deep neural networks. However, BYOL in its original
-                        form is limited to only two augmented views per training cycle. This motivates us
-                        to extend BYOL from a single target network branch to multiple branches, which
-                        enables simultaneous analysis of multiple augmented views of an input image.
-                        Increasing branches of the target networks marginally increase the computational
-                        cost as each branch is updated only using exponential moving average of online
-                        network’s parameters. We demonstrate superior performance of Multi-Target
-                        BYOL on several vision datasets by evaluating the representations learned by the
-                        online network using linear evaluation protocols.
+            <!-- Paper 5 -->
+            <div class="bg-white rounded-lg shadow-md p-6 border border-gray-200 hover:shadow-lg transition-shadow duration-300 animate-on-scroll">
+                <div class="mb-4">
+                    <h3 class="text-xl md:text-2xl font-bold text-[#003366] mb-2">Leveraging Auxiliary Classification for Rib Fracture Segmentation</h3>
+                    <div class="text-gray-700 italic mb-1">Harini G*, Aiman Farooq*,and Deepak Mishra</div>
+                    <div class="flex flex-wrap items-center justify-between mt-3 gap-2">
+                        <span class="bg-blue-100 text-[#003366] px-3 py-1 rounded-full text-sm font-semibold">ICVGIP, 2024</span>
+                        <a href="https://ui.adsabs.harvard.edu/abs/2024arXiv241109283H/abstract" target="_blank"
+                            class="text-white bg-[#0077be] hover:bg-[#003366] px-4 py-2 rounded-md text-sm font-bold transition-colors">
+                            <i class="fas fa-file-pdf mr-1"></i> View Paper
+                        </a>
                     </div>
-                    <span class="read-more" onclick="toggleAbstract(this)">Read More</span>
                 </div>
-            </div>
-        </div>
-
-        <div class="paper-box">
-            <div class="paper-info">
-                <div class="paper-title">MBGRLp: Multiscale Bootstrap Graph Representation Learning on Pointcloud
-                    (Student Abstract)</div>
-                <div class="paper-authors">Vandan Gorade, Azad Singh and Deepak Mishra </div>
-                <div class="paper-publication">AAAI 2022</div>
-                <a href="https://ojs.aaai.org/index.php/AAAI/article/view/21615" class="paper-link" target="_blank">View
-                    Paper</a>
-            </div>
-            <div class="paper-content">
-                <div class="paper-image">
-                    <img src="./images/mbgrlp.png" alt="mtbyol Architecture">
-                </div>
-                <div class="paper-abstract">
-                    <div class="abstract-content">
-                        Point cloud has gained a lot of attention with the availability of a large amount of point cloud
-                        data and increasing applications like city planning and self-driving cars. However, current
-                        methods, often rely on labeled information and costly processing, such as converting point cloud
-                        to voxel. We propose a self-supervised learning approach to tackle these problems, combating
-                        labelling and additional memory cost issues. Our proposed method achieves results comparable to
-                        supervised and unsupervised baselines on the widely used benchmark datasets for self-supervised
-                        point cloud classification like ShapeNet, ModelNet10/40.
+                <div class="flex flex-col md:flex-row gap-6 border-t border-gray-100 pt-4">
+                    <div class="w-full md:w-1/3 lg:w-1/4 shrink-0 flex items-start justify-center bg-gray-50 p-2 rounded skeleton-bg animate-pulse">
+                        <img src="./images/net.png" class="max-w-full h-auto max-h-64 object-contain rounded shadow-sm opacity-0"
+                            alt="ICVGIPArch" onload="handleImageLoad(this)">
                     </div>
-                    <span class="read-more" onclick="toggleAbstract(this)">Read More</span>
+                    <div class="flex-1">
+                        <h4 class="font-bold text-gray-500 mb-2 text-xs uppercase tracking-wider">Abstract</h4>
+                        <div class="text-gray-600 text-sm leading-relaxed">
+                            <div class="paper-abstract-text max-h-24 overflow-hidden relative">
+                                Thoracic trauma often results in rib fractures, which demand swift and accurate diagnosis for effective treatment. However, detecting these fractures on rib CT scans poses considerable challenges, involving the analysis of many image slices in sequence. Despite notable advancements in algorithms for automated fracture segmentation, the persisting challenges stem from the diverse shapes and sizes of these fractures. To address these issues, this study introduces a sophisticated deep-learning model with an auxiliary classification task designed to enhance the accuracy of rib fracture segmentation. The auxiliary classification task is crucial in distinguishing between fractured ribs and negative regions, encompassing non-fractured ribs and surrounding tissues, from the patches obtained from CT scans. By leveraging this auxiliary task, the model aims to improve feature representation at the bottleneck layer by highlighting the regions of interest. Experimental results on the RibFrac dataset demonstrate significant improvement in segmentation performance.
+                            </div>
+                            <button onclick="toggleAbstract(this)" class="mt-2 text-[#0077be] hover:text-[#003366] text-sm font-bold focus:outline-none flex items-center gap-1">
+                                <span>Read More</span> <i class="fas fa-chevron-down text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            <!-- Paper 6 -->
+            <div class="bg-white rounded-lg shadow-md p-6 border border-gray-200 hover:shadow-lg transition-shadow duration-300 animate-on-scroll">
+                <div class="mb-4">
+                    <h3 class="text-xl md:text-2xl font-bold text-[#003366] mb-2">Enhanced Survival Prediction in Head and Neck Cancer</h3>
+                    <div class="text-gray-700 italic mb-1">Aiman Farooq, Utkarsh Sharma, and Deepak Mishra</div>
+                    <div class="flex flex-wrap items-center justify-between mt-3 gap-2">
+                        <span class="bg-blue-100 text-[#003366] px-3 py-1 rounded-full text-sm font-semibold">ACCVW, 2024</span>
+                        <a href="https://openaccess.thecvf.com/content/ACCV2024W/WiCV/papers/Farooq_Enhanced_Survival_Prediction_in_Head_and_Neck_Cancer_Using_Convolutional_ACCVW_2024_paper.pdf" target="_blank"
+                            class="text-white bg-[#0077be] hover:bg-[#003366] px-4 py-2 rounded-md text-sm font-bold transition-colors">
+                            <i class="fas fa-file-pdf mr-1"></i> View Paper
+                        </a>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row gap-6 border-t border-gray-100 pt-4">
+                    <div class="w-full md:w-1/3 lg:w-1/4 shrink-0 flex items-start justify-center bg-gray-50 p-2 rounded skeleton-bg animate-pulse">
+                        <img src="./images/final3.png" class="max-w-full h-auto max-h-64 object-contain rounded shadow-sm opacity-0"
+                            alt="ACCVArch" onload="handleImageLoad(this)">
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="font-bold text-gray-500 mb-2 text-xs uppercase tracking-wider">Abstract</h4>
+                        <div class="text-gray-600 text-sm leading-relaxed">
+                            <div class="paper-abstract-text max-h-24 overflow-hidden relative">
+                                Accurate survival prediction in head and neck cancer (HNC) is essential for guiding clinical decision-making and optimizing treatment strategies. Traditional models, such as Cox proportional hazards, have been widely used but are limited in their ability to handle complex multimodal data. This paper proposes a deep learning-based approach leveraging CT and PET imaging modalities to predict survival outcomes in HNC patients. Our method integrates feature extraction with a Convolutional Block Attention Module (CBAM) and a multi-modal data fusion layer that combines imaging data to generate a compact feature representation. The final prediction is achieved through a fully parametric discrete-time survival model, allowing for flexible hazard functions that overcome the limitations of traditional survival models. We evaluated our approach using the HECKTOR and HEAD-NECK-RADIOMICSHN1 datasets, demonstrating its superior performance compared to conventional statistical and machine learning models. The results indicate that our deep learning model significantly improves survival prediction accuracy, offering a robust tool for personalized treatment planning in HNC.
+                            </div>
+                            <button onclick="toggleAbstract(this)" class="mt-2 text-[#0077be] hover:text-[#003366] text-sm font-bold focus:outline-none flex items-center gap-1">
+                                <span>Read More</span> <i class="fas fa-chevron-down text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paper 7 -->
+            <div class="bg-white rounded-lg shadow-md p-6 border border-gray-200 hover:shadow-lg transition-shadow duration-300 animate-on-scroll">
+                <div class="mb-4">
+                    <h3 class="text-xl md:text-2xl font-bold text-[#003366] mb-2">MLVICX: Multi-Level Variance-Covariance Exploration for Chest X-ray Self-Supervised Representation Learning</h3>
+                    <div class="text-gray-700 italic mb-1">Azad Singh, Vandan Gorade, and Deepak Mishra</div>
+                    <div class="flex flex-wrap items-center justify-between mt-3 gap-2">
+                        <span class="bg-blue-100 text-[#003366] px-3 py-1 rounded-full text-sm font-semibold">IEEE Journal of Biomedical and Health Informatics, 2024</span>
+                        <a href="https://ieeexplore.ieee.org/document/10666966" target="_blank"
+                            class="text-white bg-[#0077be] hover:bg-[#003366] px-4 py-2 rounded-md text-sm font-bold transition-colors">
+                            <i class="fas fa-file-pdf mr-1"></i> View Paper
+                        </a>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row gap-6 border-t border-gray-100 pt-4">
+                    <div class="w-full md:w-1/3 lg:w-1/4 shrink-0 flex items-start justify-center bg-gray-50 p-2 rounded skeleton-bg animate-pulse">
+                        <img src="./images/mlvicx.png" class="max-w-full h-auto max-h-64 object-contain rounded shadow-sm opacity-0"
+                            alt="MLVICX Architecture" onload="handleImageLoad(this)">
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="font-bold text-gray-500 mb-2 text-xs uppercase tracking-wider">Abstract</h4>
+                        <div class="text-gray-600 text-sm leading-relaxed">
+                            <div class="paper-abstract-text max-h-24 overflow-hidden relative">
+                                Self-supervised learning (SSL) is potentially useful in reducing the need for manual annotation and making deep learning models accessible for medical image analysis tasks. By leveraging the representations learned from unlabeled data, self-supervised models perform well on tasks that require little to no fine-tuning. However, for medical images, like chest X-rays, characterized by complex anatomical structures and diverse clinical conditions, a need arises for representation learning techniques that encode fine-grained details while preserving the broader contextual information. In this context, we introduce MLVICX (Multi-Level Variance-Covariance Exploration for Chest X-ray Self-Supervised Representation Learning), an approach to capture rich representations in the form of embeddings from chest X-ray images. Central to our approach is a novel multi-level variance and covariance exploration strategy that effectively enables the model to detect diagnostically meaningful patterns while reducing redundancy. MLVICX promotes the retention of critical medical insights by adapting global and local contextual details and enhancing the variance and covariance of the learned embeddings. We demonstrate the performance of MLVICX in advancing self-supervised chest X-ray representation learning through comprehensive experiments. The performance enhancements we observe across various downstream tasks highlight the significance of the proposed approach in enhancing the utility of chest X-ray embeddings for precision medical diagnosis and comprehensive image analysis. For pertaining, we used the NIH-Chest X-ray dataset, while for downstream tasks, we utilized NIH-Chest X-ray, Vinbig-CXR, RSNA pneumonia, and SIIM-ACR Pneumothorax datasets. Overall, we observe up to 3% performance gain over SOTA SSL approaches in various downstream tasks. Additionally, to demonstrate the generalizability of the proposed method, we conducted additional experiments on fundus images and observed superior performance on multiple datasets.
+                            </div>
+                            <button onclick="toggleAbstract(this)" class="mt-2 text-[#0077be] hover:text-[#003366] text-sm font-bold focus:outline-none flex items-center gap-1">
+                                <span>Read More</span> <i class="fas fa-chevron-down text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paper 8 -->
+            <div class="bg-white rounded-lg shadow-md p-6 border border-gray-200 hover:shadow-lg transition-shadow duration-300 animate-on-scroll">
+                <div class="mb-4">
+                    <h3 class="text-xl md:text-2xl font-bold text-[#003366] mb-2">CoBooM: Codebook Guided Bootstrapping for Medical Image Representation Learning</h3>
+                    <div class="text-gray-700 italic mb-1">Azad Singh and Deepak Mishra</div>
+                    <div class="flex flex-wrap items-center justify-between mt-3 gap-2">
+                        <span class="bg-blue-100 text-[#003366] px-3 py-1 rounded-full text-sm font-semibold">MICCAI, 2024</span>
+                        <a href="https://arxiv.org/abs/2408.04262" target="_blank"
+                            class="text-white bg-[#0077be] hover:bg-[#003366] px-4 py-2 rounded-md text-sm font-bold transition-colors">
+                            <i class="fas fa-file-pdf mr-1"></i> View Paper
+                        </a>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row gap-6 border-t border-gray-100 pt-4">
+                    <div class="w-full md:w-1/3 lg:w-1/4 shrink-0 flex items-start justify-center bg-gray-50 p-2 rounded skeleton-bg animate-pulse">
+                        <img src="./images/cobom.png" class="max-w-full h-auto max-h-64 object-contain rounded shadow-sm opacity-0"
+                            alt="CoBooM Architecture" onload="handleImageLoad(this)">
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="font-bold text-gray-500 mb-2 text-xs uppercase tracking-wider">Abstract</h4>
+                        <div class="text-gray-600 text-sm leading-relaxed">
+                            <div class="paper-abstract-text max-h-24 overflow-hidden relative">
+                                Self-supervised learning (SSL) has emerged as a promising paradigm for medical image analysis by harnessing unannotated data. Despite their potential, the existing SSL approaches overlook the high anatomical similarity inherent in medical images. This makes it challenging for SSL methods to capture diverse semantic content in medical images consistently. This work introduces a novel and generalized solution that implicitly exploits anatomical similarities by integrating codebooks in SSL. The codebook serves as a concise and informative dictionary of visual patterns, which not only aids in capturing nuanced anatomical details but also facilitates the creation of robust and generalized feature representations. In this context, we propose CoBooM, a novel framework for self-supervised medical image learning by integrating continuous and discrete representations. The continuous component ensures the preservation of fine-grained details, while the discrete aspect facilitates coarse-grained feature extraction through the structured embedding space. To understand the effectiveness of CoBooM, we conduct a comprehensive evaluation of various medical datasets encompassing chest X-rays and fundus images. The experimental results reveal a significant performance gain in classification and segmentation tasks.
+                            </div>
+                            <button onclick="toggleAbstract(this)" class="mt-2 text-[#0077be] hover:text-[#003366] text-sm font-bold focus:outline-none flex items-center gap-1">
+                                <span>Read More</span> <i class="fas fa-chevron-down text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paper 9 -->
+            <div class="bg-white rounded-lg shadow-md p-6 border border-gray-200 hover:shadow-lg transition-shadow duration-300 animate-on-scroll">
+                <div class="mb-4">
+                    <h3 class="text-xl md:text-2xl font-bold text-[#003366] mb-2">IDQCE: Instance Discrimination Learning through Quantized Contextual Embeddings for Medical Images</h3>
+                    <div class="text-gray-700 italic mb-1">Azad Singh and Deepak Mishra</div>
+                    <div class="flex flex-wrap items-center justify-between mt-3 gap-2">
+                        <span class="bg-blue-100 text-[#003366] px-3 py-1 rounded-full text-sm font-semibold">ICPR, 2024</span>
+                        <a href="#"
+                            class="text-white bg-[#0077be] hover:bg-[#003366] px-4 py-2 rounded-md text-sm font-bold transition-colors">
+                            <i class="fas fa-file-pdf mr-1"></i> View Paper
+                        </a>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row gap-6 border-t border-gray-100 pt-4">
+                    <div class="w-full md:w-1/3 lg:w-1/4 shrink-0 flex items-start justify-center bg-gray-50 p-2 rounded skeleton-bg animate-pulse">
+                        <img src="./images/IPID.png" class="max-w-full h-auto max-h-64 object-contain rounded shadow-sm opacity-0"
+                            alt="IDQCE Architecture" onload="handleImageLoad(this)">
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="font-bold text-gray-500 mb-2 text-xs uppercase tracking-wider">Abstract</h4>
+                        <div class="text-gray-600 text-sm leading-relaxed">
+                            <div class="paper-abstract-text max-h-24 overflow-hidden relative">
+                                Self-supervised pre-training is effective in learning discriminative features from unlabeled medical images. However, typical self-supervised models lead to sub-optimal representations due to negligence of high anatomical similarity present in the medical images. This affects the negative and positive pairs in discriminative self-supervised models to learn view-invariant representations. Various methods are proposed to address this issue. However, many of them either concentrate on preserving pixel-level details or offer solutions for specific modalities. In this context, we propose a generalized solution to leverage the anatomical similarities while relaxing the requirements of complex pixel-preservation learning. Specifically, we introduce IDQCE: Instance Discrimination Learning through Quantized Contextual Embeddings. The proposed approach leverages the sparse discrete contextual information to guide the self-supervised framework to learn more informative representations for medical images. We evaluate the representations learned by IDQCE through comprehensive experiments and observe more than 3% performance gain under linear evaluation protocol over other SOTA approaches in multiple downstream tasks.
+                            </div>
+                            <button onclick="toggleAbstract(this)" class="mt-2 text-[#0077be] hover:text-[#003366] text-sm font-bold focus:outline-none flex items-center gap-1">
+                                <span>Read More</span> <i class="fas fa-chevron-down text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paper 10 -->
+            <div class="bg-white rounded-lg shadow-md p-6 border border-gray-200 hover:shadow-lg transition-shadow duration-300 animate-on-scroll">
+                <div class="mb-4">
+                    <h3 class="text-xl md:text-2xl font-bold text-[#003366] mb-2">Towards Soft-robotic Assistance of Ultrasonic Imaging</h3>
+                    <div class="text-gray-700 italic mb-1">Gajendra Singh, Manish Chauhan, Deepak Mishra, Rahul Choudhary, Pushpinder Singh Khera</div>
+                    <div class="flex flex-wrap items-center justify-between mt-3 gap-2">
+                        <span class="bg-blue-100 text-[#003366] px-3 py-1 rounded-full text-sm font-semibold">2024 IEEE South Asian Ultrasonics Symposium (SAUS)</span>
+                        <a href="https://doi.org/10.1109/SAUS61785.2024.10563911" target="_blank"
+                            class="text-white bg-[#0077be] hover:bg-[#003366] px-4 py-2 rounded-md text-sm font-bold transition-colors">
+                            <i class="fas fa-file-pdf mr-1"></i> View Paper
+                        </a>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row gap-6 border-t border-gray-100 pt-4">
+                    <div class="w-full md:w-1/3 lg:w-1/4 shrink-0 flex items-start justify-center bg-gray-50 p-2 rounded skeleton-bg animate-pulse">
+                        <img src="./images/IEEE_SAUS_2024.gif" class="max-w-full h-auto max-h-64 object-contain rounded shadow-sm opacity-0"
+                            alt="IEEE SAUS 2024" onload="handleImageLoad(this)">
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="font-bold text-gray-500 mb-2 text-xs uppercase tracking-wider">Abstract</h4>
+                        <div class="text-gray-600 text-sm leading-relaxed">
+                            <div class="paper-abstract-text max-h-24 overflow-hidden relative">
+                                Sonography plays a critical role in diagnosing various health conditions, but operator-dependent limitations impact imaging quality and consistency. Robotic scanning has emerged as a solution to enhance imaging consistency while reducing operator dependency. This paper presents a compliant soft robotic gripper designed to assist in sonography procedures using hyperelastic materials. The gripper design features four channels with five inflatable strips per channel constructed with Polydimethylsiloxane (PDMS), allowing for spatial bending when pressurized. Fabrication involves CAD modelling, 3D printing, and silicon casting method-based curing and finally sealed with fabric and silicon. Experimental results demonstrate the gripper’s capability, with a single channel achieving a deflection of approximately 57 degrees. Further optimization of channel length, number of channels, and number of strip configurations and their design is required through analytical or simulation work. The study showcases the feasibility of integrating soft robotics into medical imaging, potentially revolutionizing sonography practices and patient care.
+                            </div>
+                            <button onclick="toggleAbstract(this)" class="mt-2 text-[#0077be] hover:text-[#003366] text-sm font-bold focus:outline-none flex items-center gap-1">
+                                <span>Read More</span> <i class="fas fa-chevron-down text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paper 11 -->
+            <div class="bg-white rounded-lg shadow-md p-6 border border-gray-200 hover:shadow-lg transition-shadow duration-300 animate-on-scroll">
+                <div class="mb-4">
+                    <h3 class="text-xl md:text-2xl font-bold text-[#003366] mb-2">Translating Imaging to Genomics: Leveraging Transformers for Predictive Modeling</h3>
+                    <div class="text-gray-700 italic mb-1">Aiman Farooq, Deepak Mishra and Santanu Chaudhury</div>
+                    <div class="flex flex-wrap items-center justify-between mt-3 gap-2">
+                        <span class="bg-blue-100 text-[#003366] px-3 py-1 rounded-full text-sm font-semibold">CVPR Workshop : WiCV, 2024</span>
+                        <a href="https://arxiv.org/abs/2408.00311#" target="_blank"
+                            class="text-white bg-[#0077be] hover:bg-[#003366] px-4 py-2 rounded-md text-sm font-bold transition-colors">
+                            <i class="fas fa-file-pdf mr-1"></i> View Paper
+                        </a>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row gap-6 border-t border-gray-100 pt-4">
+                    <div class="w-full md:w-1/3 lg:w-1/4 shrink-0 flex items-start justify-center bg-gray-50 p-2 rounded skeleton-bg animate-pulse">
+                        <img src="./images/wicv.png" class="max-w-full h-auto max-h-64 object-contain rounded shadow-sm opacity-0"
+                            alt="WiCVArchitecture" onload="handleImageLoad(this)">
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="font-bold text-gray-500 mb-2 text-xs uppercase tracking-wider">Abstract</h4>
+                        <div class="text-gray-600 text-sm leading-relaxed">
+                            <div class="paper-abstract-text max-h-24 overflow-hidden relative">
+                                In this study, we present a novel approach for predicting genomic information from medical imaging modalities using a transformer-based model. We aim to bridge the gap between imaging and genomics data by leveraging transformer networks, allowing for accurate genomic profile predictions from CT/MRI images. Presently most studies rely on the use of whole slide images (WSI) for the association, which are obtained via invasive methodologies. We propose using only available CT/MRI images to predict genomic sequences. Our transformer based approach is able to efficiently generate associations between multiple sequences based on CT/MRI images alone. This work paves the way for the use of non-invasive imaging modalities for precise and personalized healthcare, allowing for a better understanding of diseases and treatment.
+                            </div>
+                            <button onclick="toggleAbstract(this)" class="mt-2 text-[#0077be] hover:text-[#003366] text-sm font-bold focus:outline-none flex items-center gap-1">
+                                <span>Read More</span> <i class="fas fa-chevron-down text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paper 12 -->
+            <div class="bg-white rounded-lg shadow-md p-6 border border-gray-200 hover:shadow-lg transition-shadow duration-300 animate-on-scroll">
+                <div class="mb-4">
+                    <h3 class="text-xl md:text-2xl font-bold text-[#003366] mb-2">Large Scale Time-Series Representation Learning via Simultaneous Low- and High-Frequency Feature Bootstrapping</h3>
+                    <div class="text-gray-700 italic mb-1">Vandan Gorade*, Azad Singh* and Deepak Mishra (* Equal Contribution)</div>
+                    <div class="flex flex-wrap items-center justify-between mt-3 gap-2">
+                        <span class="bg-blue-100 text-[#003366] px-3 py-1 rounded-full text-sm font-semibold">IEEE, Transactions on Neural Networks and Learning Systems 2023</span>
+                        <a href="https://ieeexplore.ieee.org/document/10329573" target="_blank"
+                            class="text-white bg-[#0077be] hover:bg-[#003366] px-4 py-2 rounded-md text-sm font-bold transition-colors">
+                            <i class="fas fa-file-pdf mr-1"></i> View Paper
+                        </a>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row gap-6 border-t border-gray-100 pt-4">
+                    <div class="w-full md:w-1/3 lg:w-1/4 shrink-0 flex items-start justify-center bg-gray-50 p-2 rounded skeleton-bg animate-pulse">
+                        <img src="./images/tnnls.png" class="max-w-full h-auto max-h-64 object-contain rounded shadow-sm opacity-0"
+                            alt="tnnls Architecture" onload="handleImageLoad(this)">
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="font-bold text-gray-500 mb-2 text-xs uppercase tracking-wider">Abstract</h4>
+                        <div class="text-gray-600 text-sm leading-relaxed">
+                            <div class="paper-abstract-text max-h-24 overflow-hidden relative">
+                                Learning representations from unlabeled time series data is a challenging problem. Most existing self-supervised and unsupervised approaches in the time-series domain fall short in capturing low- and high-frequency features at the same time. As a result, the generalization ability of the learned representations remains limited. Furthermore, some of these methods employ large-scale models like transformers or rely on computationally expensive techniques such as contrastive learning. To tackle these problems, we propose a non-contrastive self-supervised learning approach that efficiently captures low-and high-frequency features in a cost-effective manner. The proposed framework comprises a siamese configuration of a deep neural network with two weight-sharing branches which are followed by low- and high-frequency feature extraction modules. The two branches of the proposed network allow bootstrapping of the latent representation by taking two different augmented views of raw time series data as input. The augmented views are created by applying random transformations sampled from a single set of augmentations. The low- and high-frequency feature extraction modules of the proposed network contain a combination of multilayer perceptron (MLP) and temporal convolutional network (TCN) heads respectively, which capture the temporal dependencies from the raw input data at various scales due to the varying receptive fields. To demonstrate the robustness of our model, we performed extensive experiments and ablation studies on five real-world time-series datasets. Our method achieves state-of-art performance on all the considered datasets.
+                            </div>
+                            <button onclick="toggleAbstract(this)" class="mt-2 text-[#0077be] hover:text-[#003366] text-sm font-bold focus:outline-none flex items-center gap-1">
+                                <span>Read More</span> <i class="fas fa-chevron-down text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paper 13 -->
+            <div class="bg-white rounded-lg shadow-md p-6 border border-gray-200 hover:shadow-lg transition-shadow duration-300 animate-on-scroll">
+                <div class="mb-4">
+                    <h3 class="text-xl md:text-2xl font-bold text-[#003366] mb-2">BAFL: Federated Learning with Base Ablation for Cost Effective Communication</h3>
+                    <div class="text-gray-700 italic mb-1">Mayank Kumar, Anurag Saraswat, Ishan Mishra and Deepak Mishra</div>
+                    <div class="flex flex-wrap items-center justify-between mt-3 gap-2">
+                        <span class="bg-blue-100 text-[#003366] px-3 py-1 rounded-full text-sm font-semibold">ICPR 2022</span>
+                        <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9956684" target="_blank"
+                            class="text-white bg-[#0077be] hover:bg-[#003366] px-4 py-2 rounded-md text-sm font-bold transition-colors">
+                            <i class="fas fa-file-pdf mr-1"></i> View Paper
+                        </a>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row gap-6 border-t border-gray-100 pt-4">
+                    <div class="w-full md:w-1/3 lg:w-1/4 shrink-0 flex items-start justify-center bg-gray-50 p-2 rounded skeleton-bg animate-pulse">
+                        <img src="./images/new1.png" class="max-w-full h-auto max-h-64 object-contain rounded shadow-sm opacity-0"
+                            alt="mtbyol Architecture" onload="handleImageLoad(this)">
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="font-bold text-gray-500 mb-2 text-xs uppercase tracking-wider">Abstract</h4>
+                        <div class="text-gray-600 text-sm leading-relaxed">
+                            <div class="paper-abstract-text max-h-24 overflow-hidden relative">
+                                Federated learning is a distributed machine learning setting in which clients train a global model on their local data and share their knowledge with the server in form of the trained model while maintaining privacy of the data. The server aggregates clients' knowledge to create a generalized global model. Two major challenges faced in this process are data heterogeneity and high communication cost. We target the latter and propose a simple approach, BAFL (Federated Learning for Base Ablation) for cost effective communication in federated learning. In contrast to the common practice of employing model compression techniques to reduce the total communication cost, we propose a fine-tuning approach to leverage the feature extraction ability of layers at different depths of deep neural networks. We use a model pretrained on general-purpose large scale data as a global model. This helps in better weight initialization and reduces the total communication cost required for obtaining the generalized model. We achieve further cost reduction by focusing only on the layers responsible for semantic features (data specific information). The clients fine tune only top layers on their local data. Base layers are ablated while transferring the model and clients communicate parameters corresponding to the remaining layers. This results in reduction of communication cost per round without compromising the accuracy. We evaluate the proposed approach using VGG-16 and ResNet-50 models on datasets including WBC, FOOD-101, and CIFAR-10 and obtain up to two orders of reduction in total communication cost as compared to the conventional federated learning. We perform experiments in both IID and Non-IID settings and observe consistent improvements.
+                            </div>
+                            <button onclick="toggleAbstract(this)" class="mt-2 text-[#0077be] hover:text-[#003366] text-sm font-bold focus:outline-none flex items-center gap-1">
+                                <span>Read More</span> <i class="fas fa-chevron-down text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paper 14 -->
+            <div class="bg-white rounded-lg shadow-md p-6 border border-gray-200 hover:shadow-lg transition-shadow duration-300 animate-on-scroll">
+                <div class="mb-4">
+                    <h3 class="text-xl md:text-2xl font-bold text-[#003366] mb-2">Branching Out for Better BYOL</h3>
+                    <div class="text-gray-700 italic mb-1">Azad Singh and Deepak Mishra</div>
+                    <div class="flex flex-wrap items-center justify-between mt-3 gap-2">
+                        <span class="bg-blue-100 text-[#003366] px-3 py-1 rounded-full text-sm font-semibold">NeurIPS'21 SSL Workshop 2021</span>
+                        <a href="https://sslneurips21.github.io/files/CameraReady/Multi_Target_BYOL%20.pdf" target="_blank"
+                            class="text-white bg-[#0077be] hover:bg-[#003366] px-4 py-2 rounded-md text-sm font-bold transition-colors">
+                            <i class="fas fa-file-pdf mr-1"></i> View Paper
+                        </a>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row gap-6 border-t border-gray-100 pt-4">
+                    <div class="w-full md:w-1/3 lg:w-1/4 shrink-0 flex items-start justify-center bg-gray-50 p-2 rounded skeleton-bg animate-pulse">
+                        <img src="./images/mtbyol.png" class="max-w-full h-auto max-h-64 object-contain rounded shadow-sm opacity-0"
+                            alt="mtbyol Architecture" onload="handleImageLoad(this)">
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="font-bold text-gray-500 mb-2 text-xs uppercase tracking-wider">Abstract</h4>
+                        <div class="text-gray-600 text-sm leading-relaxed">
+                            <div class="paper-abstract-text max-h-24 overflow-hidden relative">
+                                BYOL leads migration of self-supervised learning techniques from contrastive to non-constative paradigm. Non-constative techniques do not require negative pairs to learn meaningful representations from the data. Their success mainly depends on the stochastic composition of data augmentation techniques and the siamese configuration of deep neural networks. However, BYOL in its original form is limited to only two augmented views per training cycle. This motivates us to extend BYOL from a single target network branch to multiple branches, which enables simultaneous analysis of multiple augmented views of an input image. Increasing branches of the target networks marginally increase the computational cost as each branch is updated only using exponential moving average of online network’s parameters. We demonstrate superior performance of Multi-Target BYOL on several vision datasets by evaluating the representations learned by the online network using linear evaluation protocols.
+                            </div>
+                            <button onclick="toggleAbstract(this)" class="mt-2 text-[#0077be] hover:text-[#003366] text-sm font-bold focus:outline-none flex items-center gap-1">
+                                <span>Read More</span> <i class="fas fa-chevron-down text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paper 15 -->
+            <div class="bg-white rounded-lg shadow-md p-6 border border-gray-200 hover:shadow-lg transition-shadow duration-300 animate-on-scroll">
+                <div class="mb-4">
+                    <h3 class="text-xl md:text-2xl font-bold text-[#003366] mb-2">MBGRLp: Multiscale Bootstrap Graph Representation Learning on Pointcloud (Student Abstract)</h3>
+                    <div class="text-gray-700 italic mb-1">Vandan Gorade, Azad Singh and Deepak Mishra</div>
+                    <div class="flex flex-wrap items-center justify-between mt-3 gap-2">
+                        <span class="bg-blue-100 text-[#003366] px-3 py-1 rounded-full text-sm font-semibold">AAAI 2022</span>
+                        <a href="https://ojs.aaai.org/index.php/AAAI/article/view/21615" target="_blank"
+                            class="text-white bg-[#0077be] hover:bg-[#003366] px-4 py-2 rounded-md text-sm font-bold transition-colors">
+                            <i class="fas fa-file-pdf mr-1"></i> View Paper
+                        </a>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row gap-6 border-t border-gray-100 pt-4">
+                    <div class="w-full md:w-1/3 lg:w-1/4 shrink-0 flex items-start justify-center bg-gray-50 p-2 rounded skeleton-bg animate-pulse">
+                        <img src="./images/mbgrlp.png" class="max-w-full h-auto max-h-64 object-contain rounded shadow-sm opacity-0"
+                            alt="mtbyol Architecture" onload="handleImageLoad(this)">
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="font-bold text-gray-500 mb-2 text-xs uppercase tracking-wider">Abstract</h4>
+                        <div class="text-gray-600 text-sm leading-relaxed">
+                            <div class="paper-abstract-text max-h-24 overflow-hidden relative">
+                                Point cloud has gained a lot of attention with the availability of a large amount of point cloud data and increasing applications like city planning and self-driving cars. However, current methods, often rely on labeled information and costly processing, such as converting point cloud to voxel. We propose a self-supervised learning approach to tackle these problems, combating labelling and additional memory cost issues. Our proposed method achieves results comparable to supervised and unsupervised baselines on the widely used benchmark datasets for self-supervised point cloud classification like ShapeNet, ModelNet10/40.
+                            </div>
+                            <button onclick="toggleAbstract(this)" class="mt-2 text-[#0077be] hover:text-[#003366] text-sm font-bold focus:outline-none flex items-center gap-1">
+                                <span>Read More</span> <i class="fas fa-chevron-down text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
-
-        <!-- Add more paper boxes as needed -->
-
-        <div class="gallery"></div>
-        <h3>Our collaborations</h3>
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="./images/aiims_jodhpur.jpg" alt="Aiims Jodhpur">
-                <div class="gallery-caption">All India Institute of Medical Sciences, Jodhpur</div>
+        <!-- Collaborations -->
+        <h3 class="text-2xl font-bold text-[#003366] text-center my-12 border-b-2 border-[#ffd700] pb-2 inline-block">
+            Our Collaborations
+        </h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+            <div class="text-center group">
+                <div class="h-32 flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110">
+                    <img src="./images/aiims_jodhpur.jpg" alt="Aiims Jodhpur" class="max-h-full max-w-full object-contain">
+                </div>
+                <div class="text-sm font-semibold text-gray-700"><p>All India Institute of Medical Sciences, Jodhpur</p></div>
             </div>
-            <div class="gallery-item">
-                <img src="./images/york.jpg" alt="York University">
-                <div class="gallery-caption">University of York, London (UK)</div>
+            <div class="text-center group">
+                <div class="h-32 flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110">
+                    <img src="./images/york.jpg" alt="York University" class="max-h-full max-w-full object-contain">
+                </div>
+                <div class="text-sm font-semibold text-gray-700"><p>University of York, London (UK)</p></div>
             </div>
-            <div class="gallery-item">
-                <img src="./images/iitd.webp" alt="IIT Delhi">
-                <div class="gallery-caption">Indian Institute of Technology Delhi</div>
+            <div class="text-center group">
+                <div class="h-32 flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110">
+                    <img src="./images/iitd.webp" alt="IIT Delhi" class="max-h-full max-w-full object-contain">
+                </div>
+                <div class="text-sm font-semibold text-gray-700"><p>Indian Institute of Technology Delhi</p></div>
             </div>
-            <div class="gallery-item">
-                <img src="./images/aiims_delhi.webp" alt="Aiims Delhi">
-                <div class="gallery-caption">All India Institute of Medical Sciences, Delhi</div>
+            <div class="text-center group">
+                <div class="h-32 flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110">
+                    <img src="./images/aiims_delhi.webp" alt="Aiims Delhi" class="max-h-full max-w-full object-contain">
+                </div>
+                <div class="text-sm font-semibold text-gray-700"><p>All India Institute of Medical Sciences, Delhi</p></div>
             </div>
         </div>
     </div>
 
-    </div>
     <div id="footer-placeholder"></div>
 
     <script src="js/common.js"></script>
+    <script>
+        function toggleAbstract(btn) {
+            const abstractContainer = btn.previousElementSibling;
+            if (abstractContainer.classList.contains('max-h-24')) {
+                // Expand
+                abstractContainer.classList.remove('max-h-24');
+                btn.innerHTML = '<span>Show Less</span> <i class="fas fa-chevron-up text-xs"></i>';
+            } else {
+                // Collapse
+                abstractContainer.classList.add('max-h-24');
+                btn.innerHTML = '<span>Read More</span> <i class="fas fa-chevron-down text-xs"></i>';
+            }
+        }
+    </script>
 </body>
 
 </html>
