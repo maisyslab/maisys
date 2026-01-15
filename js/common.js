@@ -4,7 +4,7 @@ const headerHTML = `
         <!-- Logo -->
          <div class="flex-shrink-0">
             <a href="index.html">
-                <img src="logo.jpeg" alt="MAISys Logo" class="h-16 w-auto bg-white rounded-lg p-1">
+                <img src="images/logo.jpeg" alt="MAISys Logo" class="h-16 w-auto bg-white rounded-lg p-1">
             </a>
         </div>
         <div class="text-center sm:text-left">
